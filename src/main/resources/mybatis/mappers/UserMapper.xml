@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lego.mapper.UserMapper">
+     <!-- 根据用户名和密码进行查询信息 -->
+      <select id="findUserByUP" resultMap="userRM">
+      select * from user where username=#{username} 
+      </select>
+     <resultMap type="User" id="userRM" autoMapping="true">
+     	<id column="user_id" property="userId"/>
+     	
+     </resultMap>
+	<!-- 保存信息 -->
+	<insert id="saveUser">
+	 insert into user(user_id,username,password,permission_id,address_id,remark) values(
+	 #{userId},
+	 #{username},
+	 #{password},
+	 #{permissionId},
+	 #{addressId},
+	 #{remark}
+	 )
+	</insert>	
+	
+</mapper>

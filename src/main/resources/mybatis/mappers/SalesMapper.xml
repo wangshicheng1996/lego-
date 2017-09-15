@@ -7,6 +7,5 @@
 <!-- 查询全部商品的销售信息 -->
 <select id="findAllSales" resultType="lego.pojo.Sales">
 select * from sales order by sale_count desc
-
 </select>
 </mapper>
