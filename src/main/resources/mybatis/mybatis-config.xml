@@ -11,15 +11,15 @@
 		<setting name="cacheEnabled" value="false" />
 	</settings>
 
-	<plugins>
+	<!-- <plugins> -->
 		<!-- 分页插件：com.github.pagehelper为PageHelper类所在包名 -->
-		<plugin interceptor="com.github.pagehelper.PageHelper">
+		<!--<plugin interceptor="com.github.pagehelper.PageHelper">-->
 			<!-- 方言 -->
-			<property name="dialect" value="oracle" />
+		<!--	<property name="dialect" value="oracle" />-->
 			<!-- 该参数默认为false -->
 			<!-- 设置为true时，使用RowBounds分页会进行count查询，查询数据总条数 -->
-			<property name="rowBoundsWithCount" value="true" />
-		</plugin>
+		<!--	<property name="rowBoundsWithCount" value="true" />-->
+		<!--</plugin>-->
 		
 		<!-- 通用Mapper插件 -->
 		<!-- <plugin interceptor="com.github.abel533.mapperhelper.MapperInterceptor">
@@ -30,5 +30,5 @@
 		</plugin> -->
 		
 		
-	</plugins>
+	<!--</plugins>-->
 </configuration>
