@@ -1,41 +1,35 @@
 package lego.pojo;
 
+import java.sql.Date;
+
 //销售榜单
 public class Sales {
-	private String productId;//商品id
-	private Integer number;//销售数量
-	private String month;//月份
-	private String quarter;//季度
-	private String year;//年份
+	private Integer saleId;//销售编号
+	private String productId;//商品ID
+	private Integer saleCount;//销售数量
+	private Date saleTime;//销售时间
+	public Integer getSaleId() {
+		return saleId;
+	}
+	public void setSaleId(Integer saleId) {
+		this.saleId = saleId;
+	}
 	public String getProductId() {
 		return productId;
 	}
 	public void setProductId(String productId) {
 		this.productId = productId;
 	}
-	
-	public Integer getNumber() {
-		return number;
+	public Integer getSaleCount() {
+		return saleCount;
 	}
-	public void setNumber(Integer number) {
-		this.number = number;
+	public void setSaleCount(Integer saleCount) {
+		this.saleCount = saleCount;
 	}
-	public String getMonth() {
-		return month;
+	public Date getSaleTime() {
+		return saleTime;
 	}
-	public void setMonth(String month) {
-		this.month = month;
-	}
-	public String getQuarter() {
-		return quarter;
-	}
-	public void setQuarter(String quarter) {
-		this.quarter = quarter;
-	}
-	public String getYear() {
-		return year;
-	}
-	public void setYear(String year) {
-		this.year = year;
+	public void setSaleTime(Date saleTime) {
+		this.saleTime = saleTime;
 	}
 }

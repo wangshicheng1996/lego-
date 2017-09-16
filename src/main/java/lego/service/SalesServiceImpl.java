@@ -56,9 +56,9 @@ public class SalesServiceImpl implements SalesService{
 //	    fileOut.close();
 		
 		List<Sales> salesList = salesMapper.findAllSales();
-		StringBuilder str = new StringBuilder("商品id\t销售数量\t月份\t季度\t年份\n");
+		StringBuilder str = new StringBuilder("销售编号\t商品id\t销售数量\t销售时间\n");
 		for(Sales info : salesList){
-			str.append(info.getProductId()).append("\t").append(info.getNumber()).append("\t").append(info.getMonth()).append("\t").append(info.getQuarter()).append("\t").append(info.getYear()).append("\n");
+			str.append(info.getSaleId()).append("\t").append(info.getProductId()).append("\t").append(info.getSaleCount()).append("\t").append(info.getSaleTime()).append("\n");
 		}
 		return str;
 	}
