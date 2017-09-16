@@ -3,6 +3,9 @@
 <!DOCTYPE HTML>
 <link rel="stylesheet" href="/css/head.css"/>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css"> #tianqi{float: right;} #fancybox-frame{float: left;}</style> 
 <div id="common_head">
 	<div id="line1">
@@ -31,20 +34,22 @@
 		<input type="text" name="letgo"/>
 		
 		<!--无法显示搜索这个文字  -->
-		<input type="button" value="搜 索"/>
+		<button type="button" class="btn btn-warning" style="margin-left: -2px;">搜索</button>
+		<!-- <input type="button" value="搜 索"/> -->
 		<!--++++++++++++++++++++++++++++++ -->
 
-		<span id="goto" style="width: auto;%" >
+		<span id="goto" style="width: auto;%;margin-left: 30px"  >
 			<a id="goto_order" href="/OrderListServlet">我的订单</a>
 			<a id="goto_cart" href="/cart.jsp">我的购物车</a>
 			
 			
-		<!--显示位置待修改  -->
-		<div id="tianqi" style="display: inline-block;" >
+		
+		<div id="tianqi" style="display: inline-block;margin-top: 20px;margin-left: -200px;margin-right: 70px" >
 		<iframe id="fancybox-frame" style="display: inline-block;width: 239px;height: 70px" 
+		frameborder="0" scrolling="no" hspace="0"  
 		 src="http://i.tianqi.com/index.php?c=code&a=getcode&id=42&h=54&w=214" ></iframe>
 		 </div>
-		<!--++++++++++++++++++++++++++++++ -->
+	
 		 
 		</span>
 		<%-- <img id="erwm" src="${ app }/img/head/qr.jpg"/> --%>

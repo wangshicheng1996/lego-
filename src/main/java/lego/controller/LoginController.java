@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import lego.pojo.User;
 import lego.service.UserService;
+import lego.tool.MailUtil;
 
 @Controller
 public class LoginController {
@@ -39,29 +40,49 @@ public class LoginController {
 						
 				return "/sysadmin/login/login";
 				
-			}				
+			}	
+			
+			//检查账户是否激活，remark为yes未激活，否为未激活
+			//会发送激活邮件然后不允许登录，跳回首页
+			/*代码实现*/
+			
+			
 			session.setAttribute("sessionUser",user );		
 			return "";
 	
 	}
 		//退出
-		@RequestMapping("logout")
+		@RequestMapping("/logout")
 		public String logut(HttpSession session){
 			session.removeAttribute("sessionUser");
 			return "";
 		}
 		//注册
-		@RequestMapping("")
+		@RequestMapping("/logoutj")
 		public String registration(){
-			return"";
+			
+			return "";
 		}
 		//注册提交
-		@RequestMapping("")
-		public String savaregistration(User user){
-			
-			
+		@RequestMapping("/logouth")
+		public String savaregistration(User user){	
+
 			userSerivce.saveUser(user);
+
 			return "";
+		}
+		//验证
+		@RequestMapping("验证")
+		public String 验证(String userId,Integer h){	
+			//根据userId查询
+			
+			//对比查询到的结果与接受到的数据
+			
+			//一致则更改user中的remark
+			
+			//不一致定时转发，提示验证失败然后到首页
+			
+			return "返回登录界面";
 		}
 
 }

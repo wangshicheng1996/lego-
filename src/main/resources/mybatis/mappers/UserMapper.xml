@@ -7,7 +7,7 @@
       <select id="findUserByUP" resultMap="userRM">
       select * from user where username=#{username} 
       </select>
-     <resultMap type="User" id="userRM" autoMapping="true">
+     <resultMap type="lego.pojo.User" id="userRM" autoMapping="true">
      	<id column="user_id" property="userId"/>
      	
      </resultMap>
