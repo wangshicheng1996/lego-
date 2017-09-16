@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html>
 
@@ -6,10 +7,10 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">			
 		<title>全部分类</title>
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
-		<link href="../basic/css/demo.css" rel="stylesheet" type="text/css" />		
-		<link href="../css/sortstyle.css" rel="stylesheet" type="text/css" />
-		<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+		<link href="${ctx}/basic/css/demo.css" rel="stylesheet" type="text/css" />		
+		<link href="${ctx}/css/sortstyle.css" rel="stylesheet" type="text/css" />
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
 	</head>
 
 	<body>
@@ -42,9 +43,9 @@
 				<!--悬浮搜索框-->
 
 				<div class="nav white">
-					<div class="logo"><img src="../images/logo.png" /></div>
+					<div class="logo"><img src="${ctx}/images/logo.png" /></div>
 					<div class="logoBig">
-						<li><img src="../images/logobig.png" /></li>
+						<li><img src="${ctx}/images/logobig.png" /></li>
 					</div>
 
 					<div class="search-bar pr">
@@ -71,7 +72,7 @@
 										<ul class="category-list" id="js_climit_li">
 											<li class="appliance js_toggle relative first selected">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../images/cake.png"></i><a class="ml-22" title="点心">点心/蛋糕</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/cake.png"></i><a class="ml-22" title="点心">点心/蛋糕</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -80,7 +81,7 @@
 																
 																<div class="brand-side">
 													              <dl class="dl-sort"><dt><span>为您推荐</span></dt>
-													                <img src="../images/TJ.jpg">
+													                <img src="${ctx}/images/TJ.jpg">
 													              </dl>
 												                </div>																
 																
@@ -120,7 +121,7 @@
 											</li>
 											<li class="appliance js_toggle relative">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../images/cookies.png"></i><a class="ml-22" title="饼干、膨化">饼干/膨化</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/cookies.png"></i><a class="ml-22" title="饼干、膨化">饼干/膨化</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -128,7 +129,7 @@
 															<div class="menu-srot">
 																<div class="brand-side">
 													              <dl class="dl-sort"><dt><span>为您推荐</span></dt>
-													                <img src="../images/TJ.jpg">
+													                <img src="${ctx}/images/TJ.jpg">
 													              </dl>
 												                </div>																	
 																<div class="sort-side">
@@ -174,7 +175,7 @@
 											</li>
 											<li class="appliance js_toggle relative">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../images/meat.png"></i><a class="ml-22" title="熟食、肉类">熟食/肉类</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/meat.png"></i><a class="ml-22" title="熟食、肉类">熟食/肉类</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -182,7 +183,7 @@
 															<div class="menu-srot">
 																<div class="brand-side">
 													              <dl class="dl-sort"><dt><span>为您推荐</span></dt>
-													                <img src="../images/TJ.jpg">
+													                <img src="${ctx}/images/TJ.jpg">
 													              </dl>
 												                </div>																	
 																<div class="sort-side">
@@ -220,7 +221,7 @@
 											</li>
 											<li class="appliance js_toggle relative">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../images/bamboo.png"></i><a class="ml-22" title="素食、卤味">素食/卤味</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/bamboo.png"></i><a class="ml-22" title="素食、卤味">素食/卤味</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -228,7 +229,7 @@
 															<div class="menu-srot">
 																<div class="brand-side">
 													              <dl class="dl-sort"><dt><span>为您推荐</span></dt>
-													                <img src="../images/TJ.jpg">
+													                <img src="${ctx}/images/TJ.jpg">
 													              </dl>
 																</div>																
 																<div class="sort-side">
@@ -268,7 +269,7 @@
 											</li>
 											<li class="appliance js_toggle relative">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../images/nut.png"></i><a class="ml-22" title="坚果、炒货">坚果/炒货</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/nut.png"></i><a class="ml-22" title="坚果、炒货">坚果/炒货</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -276,7 +277,7 @@
 															<div class="menu-srot">
 																<div class="brand-side">
 													              <dl class="dl-sort"><dt><span>为您推荐</span></dt>
-													                <img src="../images/TJ.jpg">
+													                <img src="${ctx}/images/TJ.jpg">
 													              </dl>
 																</div>																
 																<div class="sort-side">
@@ -314,7 +315,7 @@
 											</li>
 											<li class="appliance js_toggle relative">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../images/candy.png"></i><a class="ml-22" title="糖果、蜜饯">糖果/蜜饯</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/candy.png"></i><a class="ml-22" title="糖果、蜜饯">糖果/蜜饯</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -322,7 +323,7 @@
 															<div class="menu-srot">
 																<div class="brand-side">
 													              <dl class="dl-sort"><dt><span>为您推荐</span></dt>
-													                <img src="../images/TJ.jpg">
+													                <img src="${ctx}/images/TJ.jpg">
 													              </dl>
 																</div>																
 																<div class="sort-side">
@@ -360,7 +361,7 @@
 											</li>
 											<li class="appliance js_toggle relative">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../images/chocolate.png"></i><a class="ml-22" title="巧克力">巧克力</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/chocolate.png"></i><a class="ml-22" title="巧克力">巧克力</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -368,7 +369,7 @@
 															<div class="menu-srot">
 																<div class="brand-side">
 													              <dl class="dl-sort"><dt><span>为您推荐</span></dt>
-													                <img src="../images/TJ.jpg">
+													                <img src="${ctx}/images/TJ.jpg">
 													              </dl>
 																</div>																
 																<div class="sort-side">
@@ -406,7 +407,7 @@
 											</li>
 											<li class="appliance js_toggle relative">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../images/fish.png"></i><a class="ml-22" title="海味、河鲜">海味/河鲜</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/fish.png"></i><a class="ml-22" title="海味、河鲜">海味/河鲜</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -414,7 +415,7 @@
 															<div class="menu-srot">
 																<div class="brand-side">
 													              <dl class="dl-sort"><dt><span>为您推荐</span></dt>
-													                <img src="../images/TJ.jpg">
+													                <img src="${ctx}/images/TJ.jpg">
 													              </dl>
 																</div>																
 																<div class="sort-side">
@@ -454,7 +455,7 @@
 											</li>
 											<li class="appliance js_toggle relative">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../images/tea.png"></i><a class="ml-22" title="花茶、果茶">花茶/果茶</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/tea.png"></i><a class="ml-22" title="花茶、果茶">花茶/果茶</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -462,7 +463,7 @@
 															<div class="menu-srot">
 																<div class="brand-side">
 													              <dl class="dl-sort"><dt><span>为您推荐</span></dt>
-													                <img src="../images/TJ.jpg">
+													                <img src="${ctx}/images/TJ.jpg">
 													              </dl>
 																</div>																
 																<div class="sort-side">
@@ -500,7 +501,7 @@
 											</li>
 											<li class="appliance js_toggle relative last">
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../images/package.png"></i><a class="ml-22" title="品牌、礼包">品牌/礼包</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/package.png"></i><a class="ml-22" title="品牌、礼包">品牌/礼包</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -508,7 +509,7 @@
 															<div class="menu-srot">
 																<div class="brand-side">
 													              <dl class="dl-sort"><dt><span>为您推荐</span></dt>
-													                <img src="../images/TJ.jpg">
+													                <img src="${ctx}/images/TJ.jpg">
 													              </dl>
 																</div>																
 																<div class="sort-side">
@@ -563,7 +564,7 @@
 			<li><a href="home2.html"><i class="am-icon-home "></i>首页</a></li>
 			<li  class="active"><a href="sort.html"><i class="am-icon-list"></i>分类</a></li>
 			<li><a href="shopcart.html"><i class="am-icon-shopping-basket"></i>购物车</a></li>	
-			<li><a href="../person/index.html"><i class="am-icon-user"></i>我的</a></li>					
+			<li><a href="${ctx}/person/index.html"><i class="am-icon-user"></i>我的</a></li>					
 		</div>
 	</body>
 

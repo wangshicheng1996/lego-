@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html>
 
@@ -8,14 +9,14 @@
 
 		<title>我的红包</title>
 
-		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
 
-		<link href="../css/personal.css" rel="stylesheet" type="text/css">
-		<link href="../css/bostyle.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/css/bostyle.css" rel="stylesheet" type="text/css">
 
-		<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
-		<script src="../AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/amazeui.js"></script>
 	</head>
 
 	<body>
@@ -52,7 +53,7 @@
 
 				<div class="nav white">
 					<div class="logoBig">
-						<li><img src="../images/logobig.png" /></li>
+						<li><img src="${ctx}/images/logobig.png" /></li>
 					</div>
 
 					<div class="search-bar pr">
@@ -129,7 +130,7 @@
 											<ul class="item-list">
 												<li class="td td-from">
 													<div class="item-img">
-														<img src="../images/566fda5cN4b8a1675.gif">
+														<img src="${ctx}/images/566fda5cN4b8a1675.gif">
 													</div>
 
 													<div class="item-info">
@@ -155,7 +156,7 @@
 
 												<li class="td td-usestatus ">
 													<div class="item-usestatus ">
-														<p>可使用</p><span><img src="../images/gift_stamp_1.png" /></span>
+														<p>可使用</p><span><img src="${ctx}/images/gift_stamp_1.png" /></span>
 													</div>
 												</li>
 											</ul>
@@ -186,7 +187,7 @@
 											<ul class="item-list">
 												<li class="td td-from">
 													<div class="item-img">
-														<img src="../images/566fda5cN4b8a1675.gif">
+														<img src="${ctx}/images/566fda5cN4b8a1675.gif">
 													</div>
 
 													<div class="item-info">
@@ -212,7 +213,7 @@
 
 												<li class="td td-usestatus ">
 													<div class="item-usestatus ">
-														<p>已用完</p><span><img src="../images/gift_stamp_2.png" /></span>
+														<p>已用完</p><span><img src="${ctx}/images/gift_stamp_2.png" /></span>
 													</div>
 												</li>
 											</ul>
@@ -222,7 +223,7 @@
 												
 												<li class="td td-from">
 													<div class="item-img">
-														<img src="../images/566fda5cN4b8a1675.gif">
+														<img src="${ctx}/images/566fda5cN4b8a1675.gif">
 													</div>
 
 													<div class="item-info">
@@ -248,7 +249,7 @@
 
 												<li class="td td-usestatus ">
 													<div class="item-usestatus ">
-														<p>已过期</p><span><img src="../images/gift_stamp_3.png" /></span>
+														<p>已过期</p><span><img src="${ctx}/images/gift_stamp_3.png" /></span>
 													</div>
 												</li>
 											</ul>

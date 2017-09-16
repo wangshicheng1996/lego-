@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html>
 
@@ -8,13 +9,13 @@
 
 		<title>个人账单</title>
 
-		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
 
-		<link href="../css/personal.css" rel="stylesheet" type="text/css">
-		<link href="../css/blstyle.css" rel="stylesheet" type="text/css">
-		<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
-		<script src="../../one/AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+		<link href="${ctx}/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/css/blstyle.css" rel="stylesheet" type="text/css">
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="${ctx}/${ctx}/one/AmazeUI-2.4.2/assets/js/amazeui.js"></script>
 	</head>
 
 	<body>
@@ -51,7 +52,7 @@
 
 						<div class="nav white">
 							<div class="logoBig">
-								<li><img src="../images/logobig.png" /></li>
+								<li><img src="${ctx}/images/logobig.png" /></li>
 							</div>
 
 							<div class="search-bar pr">
@@ -240,7 +241,7 @@
 													<div class="mask">
 
 														<div class="bac fn-left"></div>
-														<div class="bank ng-binding" style="background-image: url(../images/combo.png);">中国农业银行</div>
+														<div class="bank ng-binding" style="background-image: url(${ctx}/images/combo.png);">中国农业银行</div>
 														<div class="details">
 															<a>查看详情</a>
 														</div>
@@ -248,7 +249,7 @@
 												</div>
 												<div class="cards-details">
 													<div class="bank-name">
-														<div class="name fn-left" style="background-image: url(../images/combo.png);"></div>
+														<div class="name fn-left" style="background-image: url(${ctx}/images/combo.png);"></div>
 														<span class="close fn-right"><a>X</a></span>
 													</div>
 													<div class="bank-detail">
@@ -289,7 +290,7 @@
 													<div class="mask">
 
 														<div class="bac fn-left"></div>
-														<div class="bank ng-binding" style="background-image: url(../images/combo1.png);">中国建设银行</div>
+														<div class="bank ng-binding" style="background-image: url(${ctx}/images/combo1.png);">中国建设银行</div>
 														<div class="details">
 															<a>查看详情</a>
 														</div>
@@ -297,7 +298,7 @@
 												</div>
 												<div class="cards-details">
 													<div class="bank-name">
-														<div class="name fn-left" style="background-image: url(../images/combo1.png);"></div>
+														<div class="name fn-left" style="background-image: url(${ctx}/images/combo1.png);"></div>
 														<span class="close fn-right"><a>X</a></span>
 													</div>
 													<div class="bank-detail">
@@ -338,7 +339,7 @@
 													<div class="mask">
 
 														<div class="bac fn-left"></div>
-														<div class="bank ng-binding" style="background-image: url(../images/combo2.png);">浦发银行</div>
+														<div class="bank ng-binding" style="background-image: url(${ctx}/images/combo2.png);">浦发银行</div>
 														<div class="details">
 															<a>查看详情</a>
 														</div>
@@ -346,7 +347,7 @@
 												</div>
 												<div class="cards-details">
 													<div class="bank-name">
-														<div class="name fn-left" style="background-image: url(../images/combo2.png);"></div>
+														<div class="name fn-left" style="background-image: url(${ctx}/images/combo2.png);"></div>
 														<span class="close fn-right"><a>X</a></span>
 													</div>
 													<div class="bank-detail">
@@ -387,7 +388,7 @@
 													<div class="mask">
 
 														<div class="bac fn-left"></div>
-														<div class="bank ng-binding" style="background-image: url(../images/combo3.png);">中国光大银行</div>
+														<div class="bank ng-binding" style="background-image: url(${ctx}/images/combo3.png);">中国光大银行</div>
 														<div class="details">
 															<a>查看详情</a>
 														</div>
@@ -395,7 +396,7 @@
 												</div>
 												<div class="cards-details">
 													<div class="bank-name">
-														<div class="name fn-left" style="background-image: url(../images/combo3.png);"></div>
+														<div class="name fn-left" style="background-image: url(${ctx}/images/combo3.png);"></div>
 														<span class="close fn-right"><a>X</a></span>
 													</div>
 													<div class="bank-detail">

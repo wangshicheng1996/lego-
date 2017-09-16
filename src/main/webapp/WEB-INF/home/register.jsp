@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html>
 
@@ -11,6 +12,7 @@
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="Cache-Control" content="no-siteapp" />
 
+<<<<<<< HEAD
 		<link rel="stylesheet" href="../AmazeUI-2.4.2/assets/css/amazeui.min.css" />
 		<link href="../css/dlstyle.css" rel="stylesheet" type="text/css">
 		<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
@@ -69,18 +71,24 @@
 			
 		</script>
 
+=======
+		<link rel="stylesheet" href="${ctx}/AmazeUI-2.4.2/assets/css/amazeui.min.css" />
+		<link href="${ctx}/css/dlstyle.css" rel="stylesheet" type="text/css">
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
+>>>>>>> branch 'master' of https://github.com/wozuishuai123/lego.git
 
 	</head>
 
 	<body>
 
 		<div class="login-boxtitle">
-			<a href="home/demo.html"><img alt="" src="../images/logobig.png" /></a>
+			<a href="home/demo.html"><img alt="" src="${ctx}/images/logobig.png" /></a>
 		</div>
 
 		<div class="res-banner">
 			<div class="res-main">
-				<div class="login-banner-bg"><span></span><img src="../images/big.jpg" /></div>
+				<div class="login-banner-bg"><span></span><img src="${ctx}/images/big.jpg" /></div>
 				<div class="login-box">
 
 				<div class="am-tabs" id="doc-my-tabs">

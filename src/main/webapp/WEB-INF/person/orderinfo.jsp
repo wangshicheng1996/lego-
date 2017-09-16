@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html>
 
@@ -8,14 +9,14 @@
 
 		<title>订单详情</title>
 
-		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
 
-		<link href="../css/personal.css" rel="stylesheet" type="text/css">
-		<link href="../css/orstyle.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/css/orstyle.css" rel="stylesheet" type="text/css">
 
-		<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
-		<script src="../AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/amazeui.js"></script>
 
 
 	</head>
@@ -54,7 +55,7 @@
 
 						<div class="nav white">
 							<div class="logoBig">
-								<li><img src="../images/logobig.png" /></li>
+								<li><img src="${ctx}/images/logobig.png" /></li>
 							</div>
 
 							<div class="search-bar pr">
@@ -132,7 +133,7 @@
 							<div class="order-logistics">
 								<a href="logistics.html">
 									<div class="icon-log">
-										<i><img src="../images/receive.png"></i>
+										<i><img src="${ctx}/images/receive.png"></i>
 									</div>
 									<div class="latest-logistics">
 										<p class="text">已签收,签收人是青年城签收，感谢使用天天快递，期待再次为您服务</p>
@@ -209,7 +210,7 @@
 												<li class="td td-item">
 													<div class="item-pic">
 														<a href="#" class="J_MakePoint">
-															<img src="../images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg">
+															<img src="${ctx}/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg">
 														</a>
 													</div>
 													<div class="item-info">
@@ -243,7 +244,7 @@
 												<li class="td td-item">
 													<div class="item-pic">
 														<a href="#" class="J_MakePoint">
-															<img src="../images/62988.jpg_80x80.jpg" class="itempic J_ItemImg">
+															<img src="${ctx}/images/62988.jpg_80x80.jpg" class="itempic J_ItemImg">
 														</a>
 													</div>
 													<div class="item-info">

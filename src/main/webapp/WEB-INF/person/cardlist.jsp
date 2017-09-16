@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html>
 
@@ -8,10 +9,10 @@
 
 		<title>我的银行卡</title>
 
-		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
 
-		<link href="../css/personal.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/css/personal.css" rel="stylesheet" type="text/css">
 
 
 	</head>
@@ -50,7 +51,7 @@
 
 						<div class="nav white">
 							<div class="logoBig">
-								<li><img src="../images/logobig.png" /></li>
+								<li><img src="${ctx}/images/logobig.png" /></li>
 							</div>
 
 							<div class="search-bar pr">
@@ -99,7 +100,7 @@
 							<li>
 								<div class="card-box">
 									<div class="card-box-name">
-										<span class="bank-logo"><a href="#"><img src="../images/bankjh.png"></a></span>
+										<span class="bank-logo"><a href="#"><img src="${ctx}/images/bankjh.png"></a></span>
 										<span title="中国建设银行" class="bank-name">中国建设银行</span>
 										<span class="bank-num4">尾号9098</span>
 										<span class="card-type card-type-CC"></span>
@@ -120,7 +121,7 @@
 							<li>
 								<div class="card-box">
 									<div class="card-box-name">
-										<span class="bank-logo"><a href="#"><img src="../images/bankns.png"></a></span>
+										<span class="bank-logo"><a href="#"><img src="${ctx}/images/bankns.png"></a></span>
 										<span title="湖北省农村信用合作联社" class="bank-name">湖北省农村信用合作联社</span>
 										<span class="bank-num4">尾号8652</span>
 										<span class="card-type card-type-DC"></span>
@@ -139,7 +140,7 @@
 							<li>
 								<div class="card-box">
 									<div class="card-box-name">
-										<span class="bank-logo"><a href="#"><img src="../images/bankjh.png"></a></span>
+										<span class="bank-logo"><a href="#"><img src="${ctx}/images/bankjh.png"></a></span>
 										<span title="中国建设银行" class="bank-name">中国建设银行</span>
 										<span class="bank-num4">尾号9098</span>
 										<span class="card-type card-type-CC"></span>
@@ -160,7 +161,7 @@
 							<li>
 								<div class="card-box">
 									<div class="card-box-name">
-										<span class="bank-logo"><a href="#"><img src="../images/bankns.png"></a></span>
+										<span class="bank-logo"><a href="#"><img src="${ctx}/images/bankns.png"></a></span>
 										<span title="湖北省农村信用合作联社" class="bank-name">湖北省农村信用合作联社</span>
 										<span class="bank-num4">尾号8652</span>
 										<span class="card-type card-type-DC"></span>

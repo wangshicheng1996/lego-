@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html>
 
@@ -8,14 +9,14 @@
 
 		<title>我的消息</title>
 
-		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
 
-		<link href="../css/personal.css" rel="stylesheet" type="text/css">
-		<link href="../css/newstyle.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/css/newstyle.css" rel="stylesheet" type="text/css">
 
-		<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
-		<script src="../AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/amazeui.js"></script>
 
 	</head>
 
@@ -53,7 +54,7 @@
 
 						<div class="nav white">
 							<div class="logoBig">
-								<li><img src="../images/logobig.png" /></li>
+								<li><img src="${ctx}/images/logobig.png" /></li>
 							</div>
 
 							<div class="search-bar pr">
@@ -121,7 +122,7 @@
 											<div class="s-msg-content i-msg-downup-wrap">
 												<div class="i-msg-downup-con">
 													<a class="i-markRead" target="_blank" href="blog.html">
-														<img src="../images/TB102.jpg">
+														<img src="${ctx}/images/TB102.jpg">
 														<p class="s-main-content">
 															最特色的湖北年货都在这儿 ~快来囤年货啦！
 														</p>
@@ -147,7 +148,7 @@
 													<a class="i-markRead" target="_blank" href="logistics.html">
 													<div class="m-item">	
 														<div class="item-pic">															
-																	<img src="../images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg">
+																	<img src="${ctx}/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg">
 														</div>
 														<div class="item-info">
 															您购买的美康粉黛醉美唇膏已签收，
@@ -175,7 +176,7 @@
 													<a class="i-markRead" target="_blank" href="record.html">
 													<div class="m-item">	
 														<div class="item-pic">															
-																	<img src="../images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg">
+																	<img src="${ctx}/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg">
 														</div>
 														<div class="item-info">
 															<p class="item-comment">您购买的美康粉黛醉美唇膏卖家已退款</p>

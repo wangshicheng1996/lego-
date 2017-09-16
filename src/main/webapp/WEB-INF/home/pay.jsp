@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -8,14 +9,14 @@
 
 		<title>结算页面</title>
 
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
 
-		<link href="../basic/css/demo.css" rel="stylesheet" type="text/css" />
-		<link href="../css/cartstyle.css" rel="stylesheet" type="text/css" />
+		<link href="${ctx}/basic/css/demo.css" rel="stylesheet" type="text/css" />
+		<link href="${ctx}/css/cartstyle.css" rel="stylesheet" type="text/css" />
 
-		<link href="../css/jsstyle.css" rel="stylesheet" type="text/css" />
+		<link href="${ctx}/css/jsstyle.css" rel="stylesheet" type="text/css" />
 
-		<script type="text/javascript" src="../js/address.js"></script>
+		<script type="text/javascript" src="${ctx}/js/address.js"></script>
 
 	</head>
 
@@ -49,9 +50,9 @@
 			<!--悬浮搜索框-->
 
 			<div class="nav white">
-				<div class="logo"><img src="../images/logo.png" /></div>
+				<div class="logo"><img src="${ctx}/images/logo.png" /></div>
 				<div class="logoBig">
-					<li><img src="../images/logobig.png" /></li>
+					<li><img src="${ctx}/images/logobig.png" /></li>
 				</div>
 
 				<div class="search-bar pr">
@@ -99,7 +100,7 @@
 									<ins class="deftip">默认地址</ins>
 								</div>
 								<div class="address-right">
-									<a href="../person/address.html">
+									<a href="${ctx}/person/address.html">
 										<span class="am-icon-angle-right am-icon-lg"></span></a>
 								</div>
 								<div class="clear"></div>
@@ -172,9 +173,9 @@
 					<div class="logistics">
 						<h3>选择支付方式</h3>
 						<ul class="pay-list">
-							<li class="pay card"><img src="../images/wangyin.jpg" />银联<span></span></li>
-							<li class="pay qq"><img src="../images/weizhifu.jpg" />微信<span></span></li>
-							<li class="pay taobao"><img src="../images/zhifubao.jpg" />支付宝<span></span></li>
+							<li class="pay card"><img src="${ctx}/images/wangyin.jpg" />银联<span></span></li>
+							<li class="pay qq"><img src="${ctx}/images/weizhifu.jpg" />微信<span></span></li>
+							<li class="pay taobao"><img src="${ctx}/images/zhifubao.jpg" />支付宝<span></span></li>
 						</ul>
 					</div>
 					<div class="clear"></div>
@@ -215,7 +216,7 @@
 												<li class="td td-item">
 													<div class="item-pic">
 														<a href="#" class="J_MakePoint">
-															<img src="../images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg"></a>
+															<img src="${ctx}/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg"></a>
 													</div>
 													<div class="item-info">
 														<div class="item-basic-info">
@@ -279,7 +280,7 @@
 												<li class="td td-item">
 													<div class="item-pic">
 														<a href="#" class="J_MakePoint">
-															<img src="../images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg"></a>
+															<img src="${ctx}/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg"></a>
 													</div>
 													<div class="item-info">
 														<div class="item-basic-info">

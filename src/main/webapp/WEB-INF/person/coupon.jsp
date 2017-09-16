@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html>
 
@@ -8,14 +9,14 @@
 
 		<title>优惠券</title>
 
-		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
 
-		<link href="../css/personal.css" rel="stylesheet" type="text/css">
-		<link href="../css/cpstyle.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/css/cpstyle.css" rel="stylesheet" type="text/css">
 			
-		<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
-		<script src="../AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/amazeui.js"></script>
 	</head>
 
 	<body>
@@ -52,7 +53,7 @@
 
 						<div class="nav white">
 							<div class="logoBig">
-								<li><img src="../images/logobig.png" /></li>
+								<li><img src="${ctx}/images/logobig.png" /></li>
 							</div>
 
 							<div class="search-bar pr">
@@ -215,7 +216,7 @@
 												
 												<li class="td td-usestatus ">
 													<div class="item-usestatus ">
-														<span><img src="../images/gift_stamp_31.png"/></span>
+														<span><img src="${ctx}/images/gift_stamp_31.png"/></span>
 													</div>
 												</li>												
 											</div>
@@ -256,7 +257,7 @@
 												
 												<li class="td td-usestatus ">
 													<div class="item-usestatus ">
-														<span><img src="../images/gift_stamp_21.png" /></span>
+														<span><img src="${ctx}/images/gift_stamp_21.png" /></span>
 													</div>
 												</li>
 											</div>

@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html>
 
@@ -8,11 +9,11 @@
 
 		<title>物流</title>
 
-		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
 
-		<link href="../css/personal.css" rel="stylesheet" type="text/css">
-		<link href="../css/lostyle.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/css/lostyle.css" rel="stylesheet" type="text/css">
 
 	</head>
 
@@ -50,7 +51,7 @@
 
 						<div class="nav white">
 							<div class="logoBig">
-								<li><img src="../images/logobig.png" /></li>
+								<li><img src="${ctx}/images/logobig.png" /></li>
 							</div>
 
 							<div class="search-bar pr">
@@ -96,7 +97,7 @@
 						<div class="package-title">
 							<div class="m-item">
 								<div class="item-pic">
-									<img src="../images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg">
+									<img src="${ctx}/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg">
 								</div>
 								<div class="item-info">
 									<p class="log-status">物流状态:<span>已签收</span> </p>

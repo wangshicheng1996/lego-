@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html>
 
@@ -11,19 +12,19 @@
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="Cache-Control" content="no-siteapp" />
 
-		<link rel="stylesheet" href="../AmazeUI-2.4.2/assets/css/amazeui.css" />
-		<link href="../css/dlstyle.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="${ctx}/AmazeUI-2.4.2/assets/css/amazeui.css" />
+		<link href="${ctx}/css/dlstyle.css" rel="stylesheet" type="text/css">
 	</head>
 
 	<body>
 
 		<div class="login-boxtitle">
-			<a href="home.html"><img alt="logo" src="../images/logobig.png" /></a>
+			<a href="home.html"><img alt="logo" src="${ctx}/images/logobig.png" /></a>
 		</div>
 
 		<div class="login-banner">
 			<div class="login-main">
-				<div class="login-banner-bg"><span></span><img src="../images/big.jpg" /></div>
+				<div class="login-banner-bg"><span></span><img src="${ctx}/images/big.jpg" /></div>
 				<div class="login-box">
 
 							<h3 class="title">登录商城</h3>

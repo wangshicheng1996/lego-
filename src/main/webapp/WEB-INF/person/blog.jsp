@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -10,9 +11,9 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="Cache-Control" content="no-siteapp"/>
   
-   <link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
-   <link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
-   <link href="../css/personal.css" rel="stylesheet" type="text/css">
+   <link href="${ctx}/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+   <link href="${ctx}/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+   <link href="${ctx}/css/personal.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 		<!--头 -->
@@ -48,7 +49,7 @@
 
 						<div class="nav white">
 							<div class="logoBig">
-								<li><img src="../images/logobig.png" /></li>
+								<li><img src="${ctx}/images/logobig.png" /></li>
 							</div>
 
 							<div class="search-bar pr">
@@ -97,9 +98,9 @@
           
           <strong class="blog-tit"><p>一张毛爷爷<span>丨</span>基础护肤</p></strong>
           <div class="Row">
-          	<li><img src="../images/blog01.jpg"/></li>
-          	<li><img src="../images/blog02.jpg"/></li>
-          	<li><img src="../images/blog03.jpg"/></li>
+          	<li><img src="${ctx}/images/blog01.jpg"/></li>
+          	<li><img src="${ctx}/images/blog02.jpg"/></li>
+          	<li><img src="${ctx}/images/blog03.jpg"/></li>
           </div>
           <p>百元以内的基础护肤套装，小编给妹子们挑选了洗面奶、爽肤水和面霜，按照洁面和护肤的顺序，大家可以尽情将这些口碑好货加入购物车哦。</p>
           <p>一向是；平价又好用的露得清洗面奶，加上很大一支感觉怎么都用不完的千纤草丝瓜水，最后用玉兰油面霜锁住面部水分，简直完美！</p>
@@ -107,9 +108,9 @@
 
          <strong class="blog-tit"><p>两张毛爷爷<span>丨</span>彩妆</p></strong>
           <div class="Row">
-          	<li><img src="../images/blog04.jpg"/></li>
-          	<li><img src="../images/blog05.jpg"/></li>
-          	<li><img src="../images/blog06.jpg"/></li>
+          	<li><img src="${ctx}/images/blog04.jpg"/></li>
+          	<li><img src="${ctx}/images/blog05.jpg"/></li>
+          	<li><img src="${ctx}/images/blog06.jpg"/></li>
           </div>
           
           <p>眼妆是整个妆面的精髓，一个精致的眼妆可以瞬间提升人的气场，或是娇羞可爱，或者温婉贤淑，或是妩媚妖娆，总有一种风格适合自己。想不到仅仅不到200软妹币就能搞定眼妆这个磨人的小妖精吧！</p>
@@ -117,9 +118,9 @@
           
          <strong class="blog-tit"><p>三张毛爷爷<span>丨</span>身体护理</p></strong>
           <div class="Row">
-          	<li><img src="../images/blog07.jpg"/></li>
-          	<li><img src="../images/blog08.jpg"/></li>
-          	<li><img src="../images/blog09.jpg"/></li>
+          	<li><img src="${ctx}/images/blog07.jpg"/></li>
+          	<li><img src="${ctx}/images/blog08.jpg"/></li>
+          	<li><img src="${ctx}/images/blog09.jpg"/></li>
           </div>          
           
            <p>初春空气干燥，洗手洗澡后不马上涂点润肤乳，皮肤就会不听话得干燥粗糙起来，着实让爱美的妹子们操碎了心。春天不光是万物复苏的季节，还是万物需要滋养的季节，而且要从头到脚得滋养。</p>
@@ -188,9 +189,9 @@
 <![endif]-->
 
 <!--[if (gte IE 9)|!(IE)]><!-->
-<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+<script src="${ctx}/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
 <!--<![endif]-->
-<script src="../AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
+<script src="${ctx}/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
 
 </body>
 </html>
