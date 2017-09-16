@@ -3,7 +3,7 @@
  *
  * https://jqueryvalidation.org/
  *
- * Copyright (c) 2017 J枚rn Zaefferer
+ * Copyright (c) 2017 Jörn Zaefferer
  * Released under the MIT license
  */
 (function( factory ) {
@@ -24,7 +24,7 @@
 		return value.replace( /<.[^<>]*?>/g, " " ).replace( /&nbsp;|&#160;/gi, " " )
 
 		// Remove punctuation
-		.replace( /[.(),;:!?%#$'\"_+=\/\-鈥溾�鈥橾*/g, "" );
+		.replace( /[.(),;:!?%#$'\"_+=\/\-“”’]*/g, "" );
 	}
 
 	$.validator.addMethod( "maxWords", function( value, element, params ) {
@@ -142,7 +142,7 @@ $.validator.addMethod( "bic", function( value, element ) {
 }, "Please specify a valid BIC code" );
 
 /*
- * C贸digo de identificaci贸n fiscal ( CIF ) is the tax identification code for Spanish legal entities
+ * Código de identificación fiscal ( CIF ) is the tax identification code for Spanish legal entities
  * Further rules can be found in Spanish on http://es.wikipedia.org/wiki/C%C3%B3digo_de_identificaci%C3%B3n_fiscal
  *
  * Spanish CIF structure:
@@ -257,7 +257,7 @@ $.validator.addMethod( "cifES", function( value, element ) {
 }, "Please specify a valid CIF number." );
 
 /*
- * Brazillian CPF number (Cadastrado de Pessoas F铆sicas) is the equivalent of a Brazilian tax registration number.
+ * Brazillian CPF number (Cadastrado de Pessoas Físicas) is the equivalent of a Brazilian tax registration number.
  * CPF numbers have 11 digits in total: 9 numbers followed by 2 check numbers that are being used for validation.
  */
 $.validator.addMethod( "cpfBR", function( value ) {
@@ -433,7 +433,7 @@ $.validator.addMethod( "creditcardtypes", function( value, element, param ) {
  * Symbols can be optional or required. Symbols required by default
  *
  * Usage examples:
- *  currency: ["拢", false] - Use false for soft currency validation
+ *  currency: ["£", false] - Use false for soft currency validation
  *  currency: ["$", false]
  *  currency: ["RM", false] - also works with text based symbols such as "RM" - Malaysia Ringgit etc
  *
@@ -453,7 +453,7 @@ $.validator.addMethod( "creditcardtypes", function( value, element, param ) {
  *
  * Multiple Symbols
  *  currencyInput: {
- *     currency: "$,拢,垄"
+ *     currency: "$,£,¢"
  *  }
  */
 $.validator.addMethod( "currency", function( value, element, param ) {
@@ -711,11 +711,11 @@ $.validator.addMethod( "netmask", function( value, element ) {
 }, "Please enter a valid netmask." );
 
 /*
- * The NIE (N煤mero de Identificaci贸n de Extranjero) is a Spanish tax identification number assigned by the Spanish
+ * The NIE (Número de Identificación de Extranjero) is a Spanish tax identification number assigned by the Spanish
  * authorities to any foreigner.
  *
- * The NIE is the equivalent of a Spaniards N煤mero de Identificaci贸n Fiscal (NIF) which serves as a fiscal
- * identification number. The CIF number (Certificado de Identificaci贸n Fiscal) is equivalent to the NIF, but applies to
+ * The NIE is the equivalent of a Spaniards Número de Identificación Fiscal (NIF) which serves as a fiscal
+ * identification number. The CIF number (Certificado de Identificación Fiscal) is equivalent to the NIF, but applies to
  * companies rather than individuals. The NIE consists of an 'X' or 'Y' followed by 7 or 8 digits then another letter.
  */
 $.validator.addMethod( "nieES", function( value, element ) {
@@ -751,7 +751,7 @@ $.validator.addMethod( "nieES", function( value, element ) {
 }, "Please specify a valid NIE number." );
 
 /*
- * The N煤mero de Identificaci贸n Fiscal ( NIF ) is the way tax identification used in Spain for individuals
+ * The Número de Identificación Fiscal ( NIF ) is the way tax identification used in Spain for individuals
  */
 $.validator.addMethod( "nifES", function( value, element ) {
 	"use strict";
@@ -904,7 +904,7 @@ $.validator.addMethod( "phoneUS", function( phone_number, element ) {
 */
 $.validator.addMethod( "postalcodeBR", function( cep_value, element ) {
 	return this.optional( element ) || /^\d{2}.\d{3}-\d{3}?$|^\d{5}-?\d{3}?$/.test( cep_value );
-}, "Informe um CEP v谩lido." );
+}, "Informe um CEP válido." );
 
 /**
  * Matches a valid Canadian Postal Code
