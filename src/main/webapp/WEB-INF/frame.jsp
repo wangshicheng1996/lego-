@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html>
 
@@ -13,8 +14,8 @@
 
 		<link href="css/personal.css" rel="stylesheet" type="text/css">
 
-		<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js" type="text/javascript"></script>
-		<script src="../AmazeUI-2.4.2/assets/js/amazeui.js" type="text/javascript"></script>
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/jquery.min.js" type="text/javascript"></script>
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/amazeui.js" type="text/javascript"></script>
 		
 	</head>
 

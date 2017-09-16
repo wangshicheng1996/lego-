@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html>
 
@@ -8,9 +9,9 @@
 
 		<title>我的积分</title>
 
-		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
-		<link href="../css/personal.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/css/personal.css" rel="stylesheet" type="text/css">
 
 		
 	</head>
@@ -49,7 +50,7 @@
 
 						<div class="nav white">
 							<div class="logoBig">
-								<li><img src="../images/logobig.png" /></li>
+								<li><img src="${ctx}/images/logobig.png" /></li>
 							</div>
 
 							<div class="search-bar pr">
@@ -98,7 +99,7 @@
 						  <div class="usable">可用积分<span>120</span></div>
 						  <div class="signIn"><a href="#"><i class="am-icon-calendar"></i>每日签到</a></div>
 						</div>
-						<div class="pointshop"><a href="#"><i><img src="../images/u5.png" /></i>积分商城</a></div>						
+						<div class="pointshop"><a href="#"><i><img src="${ctx}/images/u5.png" /></i>积分商城</a></div>						
 						<div class="pointlist" style="padding: 0px 10px;">
 							<div class="pointTitle">
 								<span>积分明细</span>

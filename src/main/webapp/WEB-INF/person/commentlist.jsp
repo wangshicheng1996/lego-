@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html>
 
@@ -8,12 +9,12 @@
 
 		<title>发表评论</title>
 
-		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
 
-		<link href="../css/personal.css" rel="stylesheet" type="text/css">
-		<link href="../css/appstyle.css" rel="stylesheet" type="text/css">
-		<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+		<link href="${ctx}/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/css/appstyle.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="${ctx}/js/jquery-1.7.2.min.js"></script>
 	</head>
 
 	<body>
@@ -50,7 +51,7 @@
 
 						<div class="nav white">
 							<div class="logoBig">
-								<li><img src="../images/logobig.png" /></li>
+								<li><img src="${ctx}/images/logobig.png" /></li>
 							</div>
 
 							<div class="search-bar pr">
@@ -99,7 +100,7 @@
 							<div class="comment-list">
 								<div class="item-pic">
 									<a href="#" class="J_MakePoint">
-										<img src="../images/comment.jpg_400x400.jpg" class="itempic">
+										<img src="${ctx}/images/comment.jpg_400x400.jpg" class="itempic">
 									</a>
 								</div>
 
@@ -127,7 +128,7 @@
 								<div class="filePic">
 									<input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*" >
 									<span>晒照片(0/5)</span>
-									<img src="../images/image.jpg" alt="">
+									<img src="${ctx}/images/image.jpg" alt="">
 								</div>
 								<div class="item-opinion">
 									<li><i class="op1"></i>好评</li>
@@ -140,7 +141,7 @@
 							<div class="comment-list">
 								<div class="item-pic">
 									<a href="#" class="J_MakePoint">
-										<img src="../images/comment.jpg_400x400.jpg" class="itempic">
+										<img src="${ctx}/images/comment.jpg_400x400.jpg" class="itempic">
 									</a>
 								</div>
 
@@ -168,7 +169,7 @@
 								<div class="filePic">
 									<input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*" >
 									<span>晒照片(0/5)</span>
-									<img src="../images/image.jpg" alt="">
+									<img src="${ctx}/images/image.jpg" alt="">
 								</div>
 								<div class="item-opinion">
 									<li><i class="op1"></i>好评</li>
@@ -180,7 +181,7 @@
 							<div class="comment-list">
 								<div class="item-pic">
 									<a href="#" class="J_MakePoint">
-										<img src="../images/comment.jpg_400x400.jpg" class="itempic">
+										<img src="${ctx}/images/comment.jpg_400x400.jpg" class="itempic">
 									</a>
 								</div>
 
@@ -208,7 +209,7 @@
 								<div class="filePic">
 									<input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*" >
 									<span>晒照片(0/5)</span>
-									<img src="../images/image.jpg" alt="">
+									<img src="${ctx}/images/image.jpg" alt="">
 								</div>
 								<div class="item-opinion">
 									<li><i class="op1"></i>好评</li>

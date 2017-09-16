@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE HTML>
 <html >
 
@@ -8,14 +9,14 @@
 
 		<title>首页</title>
 
-		<link href="../../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
-		<link href="../../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
 
-		<link href="../../basic/css/demo.css" rel="stylesheet" type="text/css" />
+		<link href="${ctx}/basic/css/demo.css" rel="stylesheet" type="text/css" />
 
-		<link href="../../css/hmstyle.css" rel="stylesheet" type="text/css" />
-		<script src="../../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
-		<script src="../../AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
+		<link href="${ctx}/css/hmstyle.css" rel="stylesheet" type="text/css" />
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
 
 	</head>
 
@@ -49,9 +50,9 @@
 				<!--悬浮搜索框-->
 
 				<div class="nav white">
-					<div class="logo"><img src="../../images/logo.png" /></div>
+					<div class="logo"><img src="${ctx}/images/logo.png" /></div>
 					<div class="logoBig">
-						<li><img src="../../images/logobig.png" /></li>
+						<li><img src="${ctx}/images/logobig.png" /></li>
 					</div>
 
 					<div class="search-bar pr">
@@ -88,7 +89,7 @@
                       <!--轮播 -->
 						<div class="am-slider am-slider-default scoll" data-am-flexslider id="demo-slider-0">
 							<ul class="am-slides">
-								<li class="banner1"><a href="introduction.html"><img src="../../images/ad5.jpg" /></a></li>
+								<li class="banner1"><a href="introduction.html"><img src="${ctx}/images/ad5.jpg" /></a></li>
 								<li class="banner2"><a><img src="../images/ad6.jpg" /></a></li>
 								<li class="banner3"><a><img src="../images/ad7.jpg" /></a></li>
 								<li class="banner4"><a><img src="../images/ad8.jpg" /></a></li>
@@ -157,7 +158,7 @@
 											</li>
 											<li >
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../../images/cookies.png"></i><a class="ml-22" title="饼干、膨化">饼干/膨化</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/cookies.png"></i><a class="ml-22" title="饼干、膨化">饼干/膨化</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -217,7 +218,7 @@
 											</li>
 											<li >
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../../images/meat.png"></i><a class="ml-22" title="熟食、肉类">熟食/肉类</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/meat.png"></i><a class="ml-22" title="熟食、肉类">熟食/肉类</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -270,7 +271,7 @@
 											</li>
 											<li >
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../../images/bamboo.png"></i><a class="ml-22" title="素食、卤味">素食/卤味</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/bamboo.png"></i><a class="ml-22" title="素食、卤味">素食/卤味</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -320,7 +321,7 @@
 											</li>
 											<li >
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../../images/nut.png"></i><a class="ml-22" title="坚果、炒货">坚果/炒货</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/nut.png"></i><a class="ml-22" title="坚果、炒货">坚果/炒货</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -422,7 +423,7 @@
 											</li>
 											<li >
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../../images/chocolate.png"></i><a class="ml-22" title="巧克力">巧克力</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/chocolate.png"></i><a class="ml-22" title="巧克力">巧克力</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -474,7 +475,7 @@
 											</li>
 											<li >
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../../images/fish.png"></i><a class="ml-22" title="海味、河鲜">海味/河鲜</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/fish.png"></i><a class="ml-22" title="海味、河鲜">海味/河鲜</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -532,7 +533,7 @@
 											</li>
 											<li >
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../../images/tea.png"></i><a class="ml-22" title="花茶、果茶">花茶/果茶</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/tea.png"></i><a class="ml-22" title="花茶、果茶">花茶/果茶</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -581,7 +582,7 @@
 											</li>
 											<li>
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../../images/package.png"></i><a class="ml-22" title="品牌、礼包">品牌/礼包</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/package.png"></i><a class="ml-22" title="品牌、礼包">品牌/礼包</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -631,7 +632,7 @@
                                  <!--比较多的导航	-->										
 											<li >
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../../images/cookies.png"></i><a class="ml-22" title="饼干、膨化">饼干/膨化</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/cookies.png"></i><a class="ml-22" title="饼干、膨化">饼干/膨化</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -691,7 +692,7 @@
 											</li>
 											<li >
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../../images/meat.png"></i><a class="ml-22" title="熟食、肉类">熟食/肉类</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/meat.png"></i><a class="ml-22" title="熟食、肉类">熟食/肉类</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -744,7 +745,7 @@
 											</li>
 											<li >
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../../images/bamboo.png"></i><a class="ml-22" title="素食、卤味">素食/卤味</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/bamboo.png"></i><a class="ml-22" title="素食、卤味">素食/卤味</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -794,7 +795,7 @@
 											</li>
 											<li>
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../../images/nut.png"></i><a class="ml-22" title="坚果、炒货">坚果/炒货</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/nut.png"></i><a class="ml-22" title="坚果、炒货">坚果/炒货</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -846,7 +847,7 @@
 											</li>											
 															<li >
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../../images/candy.png"></i><a class="ml-22" title="糖果、蜜饯">糖果/蜜饯</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/candy.png"></i><a class="ml-22" title="糖果、蜜饯">糖果/蜜饯</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -896,7 +897,7 @@
 											</li>
 											<li >
 												<div class="category-info">
-													<h3 class="category-name b-category-name"><i><img src="../../images/chocolate.png"></i><a class="ml-22" title="巧克力">巧克力</a></h3>
+													<h3 class="category-name b-category-name"><i><img src="${ctx}/images/chocolate.png"></i><a class="ml-22" title="巧克力">巧克力</a></h3>
 													<em>&gt;</em></div>
 												<div class="menu-item menu-in top">
 													<div class="area-in">
@@ -975,22 +976,22 @@
 					<!--小导航 -->
 					<div class="am-g am-g-fixed smallnav">
 						<div class="am-u-sm-3">
-							<a href="sort.html"><img src="../../images/navsmall.jpg" />
+							<a href="sort.html"><img src="${ctx}/images/navsmall.jpg" />
 								<div class="title">商品分类</div>
 							</a>
 						</div>
 						<div class="am-u-sm-3">
-							<a href="#"><img src="../../images/huismall.jpg" />
+							<a href="#"><img src="${ctx}/images/huismall.jpg" />
 								<div class="title">大聚惠</div>
 							</a>
 						</div>
 						<div class="am-u-sm-3">
-							<a href="#"><img src="../../images/mansmall.jpg" />
+							<a href="#"><img src="${ctx}/images/mansmall.jpg" />
 								<div class="title">个人中心</div>
 							</a>
 						</div>
 						<div class="am-u-sm-3">
-							<a href="#"><img src="../../images/moneysmall.jpg" />
+							<a href="#"><img src="${ctx}/images/moneysmall.jpg" />
 								<div class="title">投资理财</div>
 							</a>
 						</div>
@@ -999,10 +1000,10 @@
 					
 				<!--各类活动-->
 				<div class="row">
-					<li><a><img src="../../images/row1.jpg"/></a></li>
-					<li><a><img src="../../images/row2.jpg"/></a></li>
-					<li><a><img src="../../images/row3.jpg"/></a></li>
-					<li><a><img src="../../images/row4.jpg"/></a></li>
+					<li><a><img src="${ctx}/images/row1.jpg"/></a></li>
+					<li><a><img src="${ctx}/images/row2.jpg"/></a></li>
+					<li><a><img src="${ctx}/images/row3.jpg"/></a></li>
+					<li><a><img src="${ctx}/images/row4.jpg"/></a></li>
 				</div>
 				<div class="clear"></div>	
 					<!--走马灯 -->
@@ -1013,12 +1014,12 @@
 
 							<ul>
 								<li class="title-first"><a target="_blank" href="#">
-									<img src="../../images/TJ2.jpg"></img>
+									<img src="${ctx}/images/TJ2.jpg"></img>
 									<span>[特惠]</span>洋河年末大促，低至两件五折							
 								</a></li>
 								<li class="title-first"><a target="_blank" href="#">
 									<span>[公告]</span>商城与广州市签署战略合作协议
-								     <img src="../../images/TJ.jpg"></img>
+								     <img src="${ctx}/images/TJ.jpg"></img>
 								     <p>XXXXXXXXXXXXXXXXXX</p>
 							    </a></li>																    							    
 								<li><a target="_blank" href="#"><span>[特惠]</span>女生节商城爆品1分秒	</a></li>
@@ -1075,7 +1076,7 @@
 					  <div class="am-g am-g-fixed sale">
 						<div class="am-u-sm-3 sale-item">
 							<div class="s-img">
-								<a href="# "><img src="../../images/sale3.jpg" /></a>
+								<a href="# "><img src="${ctx}/images/sale3.jpg" /></a>
 							</div>
                            <div class="s-info">
                            	   <a href="#"><p class="s-title">ZEK 原味海苔</p></a>
@@ -1087,7 +1088,7 @@
 						
 						<div class="am-u-sm-3 sale-item">
 							<div class="s-img">
-								<a href="# "><img src="../../images/sale2.jpg" /></a>
+								<a href="# "><img src="${ctx}/images/sale2.jpg" /></a>
 							</div>
                            <div class="s-info">
                            	   <a href="#"><p class="s-title">ZEK 原味海苔</p></a>
@@ -1099,7 +1100,7 @@
 						
 						<div class="am-u-sm-3 sale-item">
 							<div class="s-img">
-								<a href="# "><img src="../../images/sale1.jpg" /></a>
+								<a href="# "><img src="${ctx}/images/sale1.jpg" /></a>
 							</div>
                            <div class="s-info">
                            	   <a href="#"><p class="s-title">ZEK 原味海苔</p></a>
@@ -1111,7 +1112,7 @@
 						
 						<div class="am-u-sm-3 sale-item">
 							<div class="s-img">
-								<a href="# "><img src="../../images/sale2.jpg " /></a>
+								<a href="# "><img src="${ctx}/images/sale2.jpg " /></a>
 							</div>
                            <div class="s-info">
                            	   <a href="#"><p class="s-title">ZEK 原味海苔</p></a>
@@ -1157,7 +1158,7 @@
 								<a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a>								
 							</div>							
 							<a href="# ">
-								<img src="../../images/5.jpg" />
+								<img src="${ctx}/images/5.jpg" />
 								<div class="outer-con ">
 									<div class="title ">
 										零食大礼包开抢啦
@@ -1181,7 +1182,7 @@
 									</div>
 									
 								</div>
-								<a href="# "><img src="../../images/act1.png" /></a>						
+								<a href="# "><img src="${ctx}/images/act1.png" /></a>						
 						</div>
 
 						<li>
@@ -1196,7 +1197,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/1.jpg " /></a>
+							<a href="# "><img src="${ctx}/images/1.jpg " /></a>
 						</div>
 						</li>
 						<li>
@@ -1211,7 +1212,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/2.jpg " /></a>
+							<a href="# "><img src="${ctx}/images/2.jpg " /></a>
 						</div>
 						</li>
 						<li>
@@ -1226,7 +1227,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/5.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/5.jpg" /></a>
 						</div>	
 						</li>
 						<li>
@@ -1241,7 +1242,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/3.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/3.jpg" /></a>
 						</div>	
 						</li>
 						<li>
@@ -1256,7 +1257,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/4.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/4.jpg" /></a>
 						</div>	
 						</li>						
 					</div>
@@ -1302,7 +1303,7 @@
 										零食大礼包
 									</div>									
 								</div>
-                                  <img src="../../images/11.jpg" />								
+                                  <img src="${ctx}/images/11.jpg" />								
 							</a>
 							<div class="triangle-topright"></div>						
 						</div>
@@ -1318,7 +1319,7 @@
 									</div>
 									
 								</div>
-								<a href="# "><img src="../../images/act2.png " /></a>
+								<a href="# "><img src="${ctx}/images/act2.png " /></a>
 								
 							</div>
                         
@@ -1334,7 +1335,7 @@
 									</div>
 									
 								</div>
-								<a href="# "><img src="../../images/6.jpg" /></a>
+								<a href="# "><img src="${ctx}/images/6.jpg" /></a>
 							</div>
                         </li>
                         <li>
@@ -1349,7 +1350,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/7.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/7.jpg" /></a>
 						</div>
                         </li>
                         <li>
@@ -1364,7 +1365,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/10.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/10.jpg" /></a>
 						</div>
                         </li>
                         <li>
@@ -1379,7 +1380,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/8.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/8.jpg" /></a>
 						</div>
                         </li>
                         <li>
@@ -1394,7 +1395,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/9.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/9.jpg" /></a>
 						</div>
 						</li>
 					</div>
@@ -1435,7 +1436,7 @@
 								<a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a>								
 							</div>							
 							<a href="# ">
-								<img src="../../images/5.jpg" />
+								<img src="${ctx}/images/5.jpg" />
 								<div class="outer-con ">
 									<div class="title ">
 										零食大礼包开抢啦
@@ -1459,7 +1460,7 @@
 									</div>
 									
 								</div>
-								<a href="# "><img src="../../images/act1.png" /></a>						
+								<a href="# "><img src="${ctx}/images/act1.png" /></a>						
 						</div>
 
 						<li>
@@ -1474,7 +1475,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/1.jpg " /></a>
+							<a href="# "><img src="${ctx}/images/1.jpg " /></a>
 						</div>
 						</li>
 						<li>
@@ -1489,7 +1490,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/2.jpg " /></a>
+							<a href="# "><img src="${ctx}/images/2.jpg " /></a>
 						</div>
 						</li>
 						<li>
@@ -1504,7 +1505,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/5.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/5.jpg" /></a>
 						</div>	
 						</li>
 						<li>
@@ -1519,7 +1520,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/3.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/3.jpg" /></a>
 						</div>	
 						</li>
 						<li>
@@ -1534,7 +1535,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/4.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/4.jpg" /></a>
 						</div>	
 						</li>						
 					</div>
@@ -1579,7 +1580,7 @@
 										零食大礼包
 									</div>									
 								</div>
-                                  <img src="../../images/11.jpg" />								
+                                  <img src="${ctx}/images/11.jpg" />								
 							</a>
 							<div class="triangle-topright"></div>						
 						</div>
@@ -1595,7 +1596,7 @@
 									</div>
 									
 								</div>
-								<a href="# "><img src="../../images/act2.png " /></a>
+								<a href="# "><img src="${ctx}/images/act2.png " /></a>
 								
 							</div>
                         
@@ -1611,7 +1612,7 @@
 									</div>
 									
 								</div>
-								<a href="# "><img src="../../images/6.jpg" /></a>
+								<a href="# "><img src="${ctx}/images/6.jpg" /></a>
 							</div>
                         </li>
                         <li>
@@ -1626,7 +1627,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/7.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/7.jpg" /></a>
 						</div>
                         </li>
                         <li>
@@ -1641,7 +1642,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/10.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/10.jpg" /></a>
 						</div>
                         </li>
                         <li>
@@ -1656,7 +1657,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/8.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/8.jpg" /></a>
 						</div>
                         </li>
                         <li>
@@ -1671,7 +1672,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/9.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/9.jpg" /></a>
 						</div>
 						</li>
 					</div>
@@ -1712,7 +1713,7 @@
 								<a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a>								
 							</div>							
 							<a href="# ">
-								<img src="../../images/5.jpg" />
+								<img src="${ctx}/images/5.jpg" />
 								<div class="outer-con ">
 									<div class="title ">
 										零食大礼包开抢啦
@@ -1736,7 +1737,7 @@
 									</div>
 									
 								</div>
-								<a href="# "><img src="../../images/act1.png" /></a>						
+								<a href="# "><img src="${ctx}/images/act1.png" /></a>						
 						</div>
 
 						<li>
@@ -1751,7 +1752,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/1.jpg " /></a>
+							<a href="# "><img src="${ctx}/images/1.jpg " /></a>
 						</div>
 						</li>
 						<li>
@@ -1766,7 +1767,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/2.jpg " /></a>
+							<a href="# "><img src="${ctx}/images/2.jpg " /></a>
 						</div>
 						</li>
 						<li>
@@ -1781,7 +1782,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/5.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/5.jpg" /></a>
 						</div>	
 						</li>
 						<li>
@@ -1796,7 +1797,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/3.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/3.jpg" /></a>
 						</div>	
 						</li>
 						<li>
@@ -1811,7 +1812,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/4.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/4.jpg" /></a>
 						</div>	
 						</li>						
 					</div>
@@ -1856,7 +1857,7 @@
 										零食大礼包
 									</div>									
 								</div>
-                                  <img src="../../images/11.jpg" />								
+                                  <img src="${ctx}/images/11.jpg" />								
 							</a>
 							<div class="triangle-topright"></div>						
 						</div>
@@ -1872,7 +1873,7 @@
 									</div>
 									
 								</div>
-								<a href="# "><img src="../../images/act2.png " /></a>
+								<a href="# "><img src="${ctx}/images/act2.png " /></a>
 								
 							</div>
                         
@@ -1888,7 +1889,7 @@
 									</div>
 									
 								</div>
-								<a href="# "><img src="../../images/6.jpg" /></a>
+								<a href="# "><img src="${ctx}/images/6.jpg" /></a>
 							</div>
                         </li>
                         <li>
@@ -1903,7 +1904,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/7.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/7.jpg" /></a>
 						</div>
                         </li>
                         <li>
@@ -1918,7 +1919,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/10.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/10.jpg" /></a>
 						</div>
                         </li>
                         <li>
@@ -1933,7 +1934,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/8.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/8.jpg" /></a>
 						</div>
                         </li>
                         <li>
@@ -1948,7 +1949,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/9.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/9.jpg" /></a>
 						</div>
 						</li>
 					</div>
@@ -1992,7 +1993,7 @@
 								<a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a>								
 							</div>							
 							<a href="# ">
-								<img src="../../images/5.jpg" />
+								<img src="${ctx}/images/5.jpg" />
 								<div class="outer-con ">
 									<div class="title ">
 										零食大礼包开抢啦
@@ -2016,7 +2017,7 @@
 									</div>
 									
 								</div>
-								<a href="# "><img src="../../images/act1.png" /></a>						
+								<a href="# "><img src="${ctx}/images/act1.png" /></a>						
 						</div>
 
 						<li>
@@ -2031,7 +2032,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/1.jpg " /></a>
+							<a href="# "><img src="${ctx}/images/1.jpg " /></a>
 						</div>
 						</li>
 						<li>
@@ -2046,7 +2047,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/2.jpg " /></a>
+							<a href="# "><img src="${ctx}/images/2.jpg " /></a>
 						</div>
 						</li>
 						<li>
@@ -2061,7 +2062,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/5.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/5.jpg" /></a>
 						</div>	
 						</li>
 						<li>
@@ -2076,7 +2077,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/3.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/3.jpg" /></a>
 						</div>	
 						</li>
 						<li>
@@ -2091,7 +2092,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/4.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/4.jpg" /></a>
 						</div>	
 						</li>						
 					</div>
@@ -2136,7 +2137,7 @@
 										零食大礼包
 									</div>									
 								</div>
-                                  <img src="../../images/11.jpg" />								
+                                  <img src="${ctx}/images/11.jpg" />								
 							</a>
 							<div class="triangle-topright"></div>						
 						</div>
@@ -2152,7 +2153,7 @@
 									</div>
 									
 								</div>
-								<a href="# "><img src="../../images/act2.png " /></a>
+								<a href="# "><img src="${ctx}/images/act2.png " /></a>
 								
 							</div>
                         
@@ -2168,7 +2169,7 @@
 									</div>
 									
 								</div>
-								<a href="# "><img src="../../images/6.jpg" /></a>
+								<a href="# "><img src="${ctx}/images/6.jpg" /></a>
 							</div>
                         </li>
                         <li>
@@ -2183,7 +2184,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/7.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/7.jpg" /></a>
 						</div>
                         </li>
                         <li>
@@ -2198,7 +2199,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/10.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/10.jpg" /></a>
 						</div>
                         </li>
                         <li>
@@ -2213,7 +2214,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/8.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/8.jpg" /></a>
 						</div>
                         </li>
                         <li>
@@ -2228,7 +2229,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/9.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/9.jpg" /></a>
 						</div>
 						</li>
 					</div>
@@ -2269,7 +2270,7 @@
 								<a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a>								
 							</div>							
 							<a href="# ">
-								<img src="../../images/5.jpg" />
+								<img src="${ctx}/images/5.jpg" />
 								<div class="outer-con ">
 									<div class="title ">
 										零食大礼包开抢啦
@@ -2293,7 +2294,7 @@
 									</div>
 									
 								</div>
-								<a href="# "><img src="../../images/act1.png" /></a>						
+								<a href="# "><img src="${ctx}/images/act1.png" /></a>						
 						</div>
 
 						<li>
@@ -2308,7 +2309,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/1.jpg " /></a>
+							<a href="# "><img src="${ctx}/images/1.jpg " /></a>
 						</div>
 						</li>
 						<li>
@@ -2323,7 +2324,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/2.jpg " /></a>
+							<a href="# "><img src="${ctx}/images/2.jpg " /></a>
 						</div>
 						</li>
 						<li>
@@ -2338,7 +2339,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/5.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/5.jpg" /></a>
 						</div>	
 						</li>
 						<li>
@@ -2353,7 +2354,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/3.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/3.jpg" /></a>
 						</div>	
 						</li>
 						<li>
@@ -2368,7 +2369,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/4.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/4.jpg" /></a>
 						</div>	
 						</li>						
 					</div>
@@ -2410,7 +2411,7 @@
 										零食大礼包
 									</div>									
 								</div>
-                                  <img src="../../images/11.jpg" />								
+                                  <img src="${ctx}/images/11.jpg" />								
 							</a>
 							<div class="triangle-topright"></div>						
 						</div>
@@ -2426,7 +2427,7 @@
 									</div>
 									
 								</div>
-								<a href="# "><img src="../../images/act2.png " /></a>
+								<a href="# "><img src="${ctx}/images/act2.png " /></a>
 								
 							</div>
                         
@@ -2442,7 +2443,7 @@
 									</div>
 									
 								</div>
-								<a href="# "><img src="../../images/6.jpg" /></a>
+								<a href="# "><img src="${ctx}/images/6.jpg" /></a>
 							</div>
                         </li>
                         <li>
@@ -2457,7 +2458,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/7.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/7.jpg" /></a>
 						</div>
                         </li>
                         <li>
@@ -2472,7 +2473,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/10.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/10.jpg" /></a>
 						</div>
                         </li>
                         <li>
@@ -2487,7 +2488,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/8.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/8.jpg" /></a>
 						</div>
                         </li>
                         <li>
@@ -2502,7 +2503,7 @@
 								</div>
 								
 							</div>
-							<a href="# "><img src="../../images/9.jpg" /></a>
+							<a href="# "><img src="${ctx}/images/9.jpg" /></a>
 						</div>
 						</li>
 					</div>
@@ -2529,7 +2530,7 @@
 								<a href="# ">合作伙伴</a>
 								<a href="# ">联系我们</a>
 								<a href="# ">网站地图</a>
-								<em>© 2015-2025 Hengwang.com 版权所有. 更多模板 <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></em>
+								<em>© 2015-2025 Lego.com 版权所有. 我最帅 <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></em>
 							</p>
 						</div>
 					</div>
@@ -2539,28 +2540,23 @@
 		</div>
 
 		<!--引导 -->
-		<div class="navCir">
+		<div class="navCir" >
 			<li class="active"><a href="home2.html"><i class="am-icon-home "></i>首页</a></li>
 			<li><a href="sort.html"><i class="am-icon-list"></i>分类</a></li>
 			<li><a href="shopcart.html"><i class="am-icon-shopping-basket"></i>购物车</a></li>	
 			<li><a href="../person/index.html"><i class="am-icon-user"></i>我的</a></li>					
 		</div>
 		<!--菜单 -->
-		<div class=tip>
-			<div id="sidebar">
-				<div id="wrap">
+		<div class=tip >
+			<div id="sidebar" >
+				<div id="wrap" >
 					<div id="prof" class="item ">
 						<a href="# ">
 							<span class="setting "></span>
 						</a>
 						<div class="ibar_login_box status_login ">
-							<div class="avatar_box ">
-								<p class="avatar_imgbox "><img src="../../images/no-img_mid_.jpg " /></p>
-								<ul class="user_info ">
-									<li>用户名：sl1903</li>
-									<li>级&nbsp;别：普通会员</li>
-								</ul>
-							</div>
+							<div class="avatar_box " style="height:100px;">
+								<iframe id="fancybox-frame" name="fancybox-frame1505560652741" frameborder="0" scrolling="no" hspace="0"  src="http://i.tianqi.com/index.php?c=code&a=getcode&id=35&h=55&w=200"></iframe>							</div>
 							<div class="login_btnbox ">
 								<a href="# " class="login_order ">我的订单</a>
 								<a href="# " class="login_favorite ">我的收藏</a>
@@ -2578,29 +2574,11 @@
 						</p>
 						<p class="cart_num ">0</p>
 					</div>
-					<div id="asset " class="item ">
-						<a href="# ">
-							<span class="view "></span>
-						</a>
-						<div class="mp_tooltip ">
-							我的资产
-							<i class="icon_arrow_right_black "></i>
-						</div>
-					</div>
-
-					<div id="foot " class="item ">
-						<a href="# ">
-							<span class="zuji "></span>
-						</a>
-						<div class="mp_tooltip ">
-							我的足迹
-							<i class="icon_arrow_right_black "></i>
-						</div>
-					</div>
+					
 
 					<div id="brand " class="item ">
 						<a href="#">
-							<span class="wdsc "><img src="../../images/wdsc.png " /></span>
+							<span class="wdsc "><img src="${ctx}/images/wdsc.png " /></span>
 						</a>
 						<div class="mp_tooltip ">
 							我的收藏
@@ -2608,15 +2586,7 @@
 						</div>
 					</div>
 
-					<div id="broadcast " class="item ">
-						<a href="# ">
-							<span class="chongzhi "><img src="../../images/chongzhi.png " /></span>
-						</a>
-						<div class="mp_tooltip ">
-							我要充值
-							<i class="icon_arrow_right_black "></i>
-						</div>
-					</div>
+				
 
 					<div class="quick_toggle ">
 						<li class="qtitem ">
@@ -2626,7 +2596,7 @@
 						<!--二维码 -->
 						<li class="qtitem ">
 							<a href="#none "><span class="mpbtn_qrcode "></span></a>
-							<div class="mp_qrcode " style="display:none; "><img src="../../images/weixin_code_145.png " /><i class="icon_arrow_white "></i></div>
+							<div class="mp_qrcode " style="display:none; "><img src="${ctx}/images/weixin_code_145.png " /><i class="icon_arrow_white "></i></div>
 						</li>
 						<li class="qtitem ">
 							<a href="#top " class="return_top "><span class="top "></span></a>
@@ -2655,38 +2625,8 @@
 					购物车
 				</div>
 			</div>
-			<div id="asset-content " class="nav-content ">
-				<div class="nav-con-close ">
-					<i class="am-icon-angle-right am-icon-fw "></i>
-				</div>
-				<div>
-					资产
-				</div>
-
-				<div class="ia-head-list ">
-					<a href="# " target="_blank " class="pl ">
-						<div class="num ">0</div>
-						<div class="text ">优惠券</div>
-					</a>
-					<a href="# " target="_blank " class="pl ">
-						<div class="num ">0</div>
-						<div class="text ">红包</div>
-					</a>
-					<a href="# " target="_blank " class="pl money ">
-						<div class="num ">￥0</div>
-						<div class="text ">余额</div>
-					</a>
-				</div>
-
-			</div>
-			<div id="foot-content " class="nav-content ">
-				<div class="nav-con-close ">
-					<i class="am-icon-angle-right am-icon-fw "></i>
-				</div>
-				<div>
-					足迹
-				</div>
-			</div>
+			
+		
 			<div id="brand-content " class="nav-content ">
 				<div class="nav-con-close ">
 					<i class="am-icon-angle-right am-icon-fw "></i>
@@ -2695,19 +2635,12 @@
 					收藏
 				</div>
 			</div>
-			<div id="broadcast-content " class="nav-content ">
-				<div class="nav-con-close ">
-					<i class="am-icon-angle-right am-icon-fw "></i>
-				</div>
-				<div>
-					充值
-				</div>
-			</div>
+			
 		</div>
 		<script>
 			window.jQuery || document.write('<script src="basic/js/jquery.min.js "><\/script>');
 		</script>
-		<script type="text/javascript " src="../../basic/js/quick_links.js "></script>
+		<script type="text/javascript " src="${ctx}/basic/js/quick_links.js "></script>
 	</body>
 
 </html>

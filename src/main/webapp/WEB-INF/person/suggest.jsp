@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html>
 
@@ -8,13 +9,13 @@
 
 		<title>意见反馈</title>
 
-		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
 
-		<link href="../css/personal.css" rel="stylesheet" type="text/css">
+		<link href="${ctx}/css/personal.css" rel="stylesheet" type="text/css">
 
-		<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js" type="text/javascript"></script>
-		<script src="../AmazeUI-2.4.2/assets/js/amazeui.js" type="text/javascript"></script>
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/jquery.min.js" type="text/javascript"></script>
+		<script src="${ctx}/AmazeUI-2.4.2/assets/js/amazeui.js" type="text/javascript"></script>
 
 	</head>
 
@@ -52,7 +53,7 @@
 
 						<div class="nav white">
 							<div class="logoBig">
-								<li><img src="../images/logobig.png" /></li>
+								<li><img src="${ctx}/images/logobig.png" /></li>
 							</div>
 
 							<div class="search-bar pr">
