@@ -1,15 +1,23 @@
 package lego.pojo;
 
 public class Product {
+	public Category category;//商品等级表对象
 	private String productId;//商品id
 	private String name;//商品名称
 	private Double price;//价格
 	private Integer count;//数量
 	private String remark;//描述
-	private Integer rankId;//类别ID
 	private Double cost;//成本
 	private String type;//规格
 	private String image;//图片地址
+	
+	
+	public Category getCategory() {
+		return category;
+	}
+	public void setCategory(Category category) {
+		this.category = category;
+	}
 	public String getProductId() {
 		return productId;
 	}
@@ -39,12 +47,6 @@ public class Product {
 	}
 	public void setRemark(String remark) {
 		this.remark = remark;
-	}
-	public Integer getRankId() {
-		return rankId;
-	}
-	public void setRankId(Integer rankId) {
-		this.rankId = rankId;
 	}
 	public Double getCost() {
 		return cost;
