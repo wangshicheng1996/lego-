@@ -10,7 +10,7 @@ spring:
     
   mvc:
     view:
-      prefix: /WEB-INF/home
+      prefix: /WEB-INF
       suffix: .jsp
      
 mybatis:
