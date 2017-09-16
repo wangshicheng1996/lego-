@@ -37,7 +37,7 @@ public class UserSerivceImpl  implements UserService{
 		
 		//提交之后进行邮箱验证
 		try {
-			MailUtil.send_mail(user.getEmail(),userId,h);
+			MailUtil.send_mail(user.getUserInfo().getEmail(),userId,h);
 		} catch (MessagingException e) {
 			e.printStackTrace();
 		}
