@@ -35,4 +35,15 @@ public class SalesController {
 		response.setContentType("text/html;charset=GBK");
 		response.getWriter().write(str.toString());
 	}
+	
+	@RequestMapping("/tot")
+	public String to(){
+		return"/regist";
+		
+	}
+	@RequestMapping("/to")
+	public String to1(){
+		return"/image";
+		
+	}
 }

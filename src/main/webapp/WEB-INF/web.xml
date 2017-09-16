@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>ValiImageServlet</servlet-name>
+  	<display-name>ValiImageServlet</display-name>
+  	<description></description>
+  	<servlet-class>lego.controller.ValiImageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ValiImageServlet</servlet-name>
+  	<url-pattern>/ValiImageServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
