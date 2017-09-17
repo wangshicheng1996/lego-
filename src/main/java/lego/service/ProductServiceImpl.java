@@ -19,4 +19,17 @@ public class ProductServiceImpl implements ProductService{
 		return productMapper.findAllProduct();
 	}
 
+	@Override
+	public void deleteById(String productId) {
+		productMapper.deleteById(productId);
+	}
+
+	@Override
+	public boolean changeCount(String productId, Integer count) {
+		//返回修改数据的条数
+		int row = productMapper.changeCount(productId,count);
+		//条数大于0则修改成功
+		return row>0;
+	}
+
 }

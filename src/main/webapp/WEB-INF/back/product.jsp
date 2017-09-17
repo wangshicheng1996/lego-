@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,6 +38,65 @@
    
     </style> 
     
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+   		<style type="text/css">
+			table {
+				text-align: center;
+				margin: 0px auto;
+			}
+			th {
+				background-color: silver;
+			}
+			</style>
+			<script type="text/javascript" src="${ctx}/js/jquery-1.4.2.js"></script>
+			<script type="text/javascript">
+			$(function(){
+				//选择对应的输入框，并绑定失去焦点的事件
+				$("input[name='count']").blur(function(){
+					//获取输入框中内容
+					var count = $(this).val();
+					//获取当前商品对应的“旧的值”
+					var oldCount = $(this).next().val();
+					//判断值是否被修改了
+					if(count!=oldCount){
+						//判断修改后的值是否为正整数
+						var reg = /^[1-9][0-9]*$/;
+						if(!reg.test(count)){//不合法
+							alert("亲请您输入正整数");
+							//还原原值
+							$(this).val(oldCount);
+						}else{//异步提交数据
+							//获取商品id ，修改输入框，添加属性id="${prod.id}"
+							var pid = $(this).attr("id");
+							var $oph = $(this).next();
+							$.post("${ctx}/BackAjaxChangeCount",
+								{"productId":pid,"count":count},
+								function(result){
+									if("true" == result){
+										alert("数量修改成功！！");
+										//修改隐藏域中的商品库存
+										$oph.val(count);
+									}else{
+										alert("数量修改失败");
+									}
+								});
+						}
+					}
+				});
+				$(".del").click(function(){
+					//获取商品id
+					var id = $(this).parent().prev().prev().
+						children("input[type='text']").attr("id");
+				
+					//判断是否确认删除
+					if(confirm("您确定删除吗？")){
+						window.location.href="${ctx}/BackProdDelete?productId="+id;
+					}
+				});
+			});
+			</script>
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    
   </head>
 
   <body>
@@ -53,9 +113,15 @@
      
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.jsp">Logout</a></li>
+                    <li ><a class="logout" onclick="change()" >Logout</a></li>
             	</ul>
             </div>
+            <script type="text/javascript">
+						function change(){
+							alter("0000");
+						}
+			</script>
+			
         </header>
       <!--header end-->
       
@@ -120,25 +186,36 @@
 
 				<!-- 主体展示部分 -->
               <div class="row">
-              		<table class="table">
-					   <thead>
-					   	  <tr><td colspan="2" align="center" style="font-size: 20px;font-weight: bold;">商品管理目录</td></tr>
-					      <tr>
-					         <th>名称</th>
-					         <th>城市</th>
-					      </tr>
-					   </thead>
-					   <tbody>
-					      <tr>
-					         <td>Tanmay</td>
-					         <td>Bangalore</td>
-					      </tr>
-					      <tr>
-					         <td>Sachin</td>
-					         <td>Mumbai</td>
-					      </tr>
-					   </tbody>
-					</table>
+              	<h1 align="center">商品管理</h1>
+				<a style="margin-left: 750px;" href="${ctx}/backAddProd">添加商品</a>
+				<hr>
+				<table bordercolor="black" border="1" width="95%" cellspacing="0px" cellpadding="5px">
+					<tr>
+						<th>商品名称</th>
+						<th>商品id</th>
+						<th>商品种类</th>
+						<th>商品成本</th>
+						<th>商品售价</th>
+						<th>库存数量</th>
+						<th>描述信息</th>
+						<th>操作</th>
+					</tr>
+				<c:forEach items="${productList}" var="prod">
+					<tr>
+						<td>${prod.name }</td>
+						<td>${prod.productId }</td>
+						<td>${prod.category.categoryName }</td>
+						<td>${prod.cost}</td>
+						<td>${prod.price}</td>
+						<td><input id="${prod.productId}" name="count" type="text" value="${prod.count }" style="width: 50px"/>
+							<input type="hidden" value="${prod.count }"> 
+						</td>
+						<td>${prod.remark}</td>
+						<td><a href="javascript:void(0)" class="del">删除</a></td>
+					</tr>
+				</c:forEach>
+				</table>
+			              
               </div>
           </section>
       </section>
