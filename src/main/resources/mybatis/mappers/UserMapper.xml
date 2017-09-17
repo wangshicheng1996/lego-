@@ -5,7 +5,7 @@
 <mapper namespace="lego.mapper.UserMapper">
      <!-- 根据用户名和密码进行查询信息 -->
       <select id="findUserByUP" resultMap="userRM">
-      select * from user where username=#{username} 
+      select * from user_p where username=#{username} 
       </select>
      <resultMap type="lego.pojo.User" id="userRM" autoMapping="true">
      	<id column="user_id" property="userId"/>
@@ -13,7 +13,7 @@
      </resultMap>
 	<!-- 保存信息 -->
 	<insert id="saveUser">
-	 insert into user(user_id,username,password,permission_id,address_id,remark) values(
+	 insert into user_p(user_id,username,password,permission_id,address_id,remark) values(
 	 #{userId},
 	 #{username},
 	 #{password},

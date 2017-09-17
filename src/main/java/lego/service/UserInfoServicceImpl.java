@@ -13,8 +13,19 @@ public class UserInfoServicceImpl implements UserInfoServicce {
 
 	@Override
 	public UserInfo findUserByUid(String userId) {
-		// TODO Auto-generated method stub
+		
 		return userInfoMapper.findUserByUid(userId);
 	}
 
+	//通过userId将个人详细信息查询出来
+	public UserInfo findUserInfoById(String userId) {
+		return	userInfoMapper.findUserInfoById(userId);
+		
+	}
+
+	//修改个人信息
+	public void updateUserInfomsg(UserInfo userinfo) {
+		userInfoMapper.updateUserInfomsg(userinfo);
+		
+	}
 }

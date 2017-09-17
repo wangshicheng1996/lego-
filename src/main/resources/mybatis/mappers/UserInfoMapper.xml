@@ -10,7 +10,27 @@
 
 <resultMap type="lego.pojo.UserInfo" id="userInfoRM" autoMapping="true">
 	 <id column="user_info_id" property="userInfoId"/>
-</resultMap>
-
-
+	</resultMap>
+	<!-- 查询个人详细信息 -->
+    <select id="findUserInfoById" resultMap="UserInfoRM" >
+    	select * from user_info_p where user_info_id=#{userInfoId}
+    </select>
+   
+  	<resultMap type="lego.pojo.UserInfo" id="UserInfoRM" autoMapping="true">
+    	<id column="user_info_p" property="userInfoId"/>
+    </resultMap>
+    
+    <!-- 修改个人详细信息 -->
+	<update id="updateUserInfomsg">
+		update user_info_p <set>	
+		 name=#{name},
+		 gender=#{gender},
+		card_no=#{cardNo},
+		birthdat=#{birthday},
+		telephone=#{telephone}
+		email=#{email}	
+		</set>
+		where user_info_id=#{userInfoId}
+	</update>
+	
 </mapper>

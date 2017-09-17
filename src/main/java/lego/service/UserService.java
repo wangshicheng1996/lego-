@@ -12,5 +12,6 @@ public interface UserService {
 	void saveUser(User user);
 	//根据用户名查询用户
 	User findUserByUserName(String username);
+	
 
 }
