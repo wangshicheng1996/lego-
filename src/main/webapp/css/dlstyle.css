@@ -101,9 +101,14 @@ input:-webkit-autofill {
 	}
 .login-links{
 	max-width:320px;
-	margin:20px auto ;
-	font-size:14px;
+	margin:2px auto ;
+	margin-left:2px;
+	padding:0px 60px 30px 10px;
+	font-size:14px ;
+	text-align: center;
 	}
+
+
 
 /*合作账号*/
 .partner{
@@ -287,16 +292,16 @@ label.valid{
 
 #email{
 border: 1px solid #cccccc;
-width: 100px;
+width: 300px;
 
 }
 #password{
 border: 1px solid #cccccc;
-width: 100px;
+width: 300px;
 
 }
 #passwordRepeat{
 border: 1px solid #cccccc;
-width: 100px;
+width: 300px;
 
 }
