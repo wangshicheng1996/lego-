@@ -73,7 +73,7 @@ public class ShiroConfiguration {
 		filterChainDefinitionMap.put("/index.jsp", "anon");
 		filterChainDefinitionMap.put("/home.action", "anon");
 
-		filterChainDefinitionMap.put("/**", "authc");  
+		//filterChainDefinitionMap.put("/**", "authc");  
 		shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);  
 		return shiroFilterFactoryBean;  
 	}
