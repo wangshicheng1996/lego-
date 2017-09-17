@@ -67,23 +67,23 @@ public class LoginController {
 	@RequestMapping("/logout")
 	public String logut(HttpSession session){
 		session.removeAttribute("sessionUser");
-		return "";
+		return "/home/login ";
 	}
 		
 	//注册
-	@RequestMapping("/logoutj")
+	@RequestMapping("/regist")
 	public String registration(){
 			
-		return "";
+		return "/home/register";
 	}
 	
 	//注册提交
-	@RequestMapping("/logouth")
+	@RequestMapping("/saveUser")
 	public String savaregistration(User user){	
 
 		userSerivce.saveUser(user);
 
-		return "";
+		return "redirect:/login";
 	}
 	//验证
 	@RequestMapping("验证")

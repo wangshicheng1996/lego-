@@ -33,19 +33,19 @@
 
 		//让当前表单调用validate方法，实现表单验证功能
 		$("#ff").validate({
-			debug : true, //调试模式，即使验证成功也不会跳转到目标页面
+			//debug : true, //调试模式，即使验证成功也不会跳转到目标页面
 			rules : { //配置验证规则，key就是被验证的dom对象，value就是调用验证的方法(也是json格式)
 				semail : {
 					required : true,
 					email : true
 				},
-				spass : {
+				password : {
 					required : true,
 					rangelength : [ 6, 16 ]
 				},
-				spass2 : {
+				password2 : {
 					required : true,
-					equalTo : '#password' //表示和id="spass"的值相同
+					equalTo : '#password' //表示和id="password"的值相同
 				}
 
 			},
@@ -54,13 +54,13 @@
 					required : "请填写邮件",
 					email : "邮箱格式不正确"
 				},
-				spass : {
+				password : {
 					required : "请输入密码",
 					rangelength : $.validator.format("密码长度为{0}-{1}个字符")
 				},
-				spass2 : {
+				password2 : {
 					required : "请再次输入密码",
-					equalTo : "两次密码必须一致" //表示和id="spass"的值相同
+					equalTo : "两次密码必须一致" //表示和id="password"的值相同
 				}
 
 			}
@@ -94,33 +94,33 @@
 
 					<div class="am-tabs-bd">
 						<div class="am-tab-panel am-active">
-							<form method="post" id="ff">
-								<div class="user-email">
+						<form action="${ctx }/saveUser.action" id="ff" method="post">
+							<div class="user-email">
 									<label for="email"><i class="am-icon-envelope-o"></i></label> <input
 										type="email" name="semail" id="email" placeholder="输入邮箱账号"
 										tip="请输入邮箱账号">
 								</div>
 								<div class="user-pass">
 									<label for="password"><i class="am-icon-lock"></i></label> <input
-										type="password" name="spass" id="password" placeholder="设置密码"
+										type="password" name="password" id="password" placeholder="设置密码"
 										tip="请设置密码">
 								</div>
 								<div class="user-pass">
 									<label for="passwordRepeat"><i class="am-icon-lock"></i></label>
-									<input type="password" name="spass2" id="passwordRepeat"
+									<input type="password" name="password2" id="passwordRepeat"
 										placeholder="确认密码" tip="请设置确认密码">
 								</div>
 							
 							<div class="login-links">
 								 <input id="reader-me"
-									type="checkbox"><i class="ii"> &nbsp;&nbsp;&nbsp;&nbsp;点击表示您同意商城《服务协议》</i>
+									type="checkbox" name="checkbox"><i class="ii"> &nbsp;&nbsp;&nbsp;&nbsp;点击表示您同意商城《服务协议》</i>
 								</input>
 							</div>
 							<div class="am-cf">
-								<input type="submit" name="" value="注册"
+								<input type="submit" name="submit" value="注册"
 									class="am-btn am-btn-primary am-btn-sm am-fl" />
 							</div>
-</form>
+						</form>
 						</div>
 
 

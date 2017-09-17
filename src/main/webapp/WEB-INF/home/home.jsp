@@ -1,6 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ include file="../base.jsp" %>
-<%@ taglib uri="http://shiro.apache.org/tags" prefix="shiro"%>
 <!DOCTYPE HTML>
 <html >
 
@@ -28,8 +27,8 @@
 				<ul class="message-l">
 					<div class="topMessage">
 						<div class="menu-hd">
-							<a href="#" target="_top" class="h">亲，请登录</a>
-							<a href="#" target="_top">免费注册</a>
+							<a href="/login" target="_top" class="h">亲，请登录</a>
+							<a href="/regist" target="_top">免费注册</a>
 						</div>
 					</div>
 				</ul>
@@ -45,10 +44,8 @@
 					</div>
 					<div class="topMessage favorite">
 						<div class="menu-hd"><a href="#" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>收藏夹</span></a></div>
-					</div>
-					
 				</ul>
-			</div>
+				</div>
 
 				<!--悬浮搜索框-->
 
@@ -82,14 +79,10 @@
                                 <li class="qc"><a href="#">团购</a></li>
                                 <li class="qc last"><a href="#">大包装</a></li>
 							</ul>
-							<shiro:hasPermission name="后台管理">
 						    <div class="nav-extra">
-						    	<a href="/back">
-						    	<i class="am-icon-user-secret am-icon-md nav-user"></i><b></b>后台管理
+						    	<i class="am-icon-user-secret am-icon-md nav-user"></i><b></b>我的福利
 						    	<i class="am-icon-angle-right" style="padding-left: 10px;"></i>
-						    	</a>
 						    </div>
-						    </shiro:hasPermission>
 						</div>
                 
 			    <div class="bannerTwo">

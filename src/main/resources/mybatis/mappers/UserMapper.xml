@@ -13,13 +13,12 @@
      </resultMap>
 	<!-- 保存信息 -->
 	<insert id="saveUser">
-	 insert into user_p(user_id,username,password,permission_id,address_id,remark) values(
-	 #{userId},
-	 #{username},
-	 #{password},
-	 #{permissionId},
-	 #{addressId},
-	 #{remark}
+	 insert into user_p(user_id,username,password,permission_id,remark) values(
+	 #{userId,jdbcType=VARCHAR},
+	 #{username,jdbcType=VARCHAR},
+	 #{password,jdbcType=VARCHAR},
+	 #{permission,jdbcType=VARCHAR},
+	 #{remark,jdbcType=VARCHAR}
 	 )
 	</insert>	
 	
