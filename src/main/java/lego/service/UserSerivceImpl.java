@@ -44,5 +44,10 @@ public class UserSerivceImpl  implements UserService{
 		
 	}
 
+	//根据用户名查询用户
+	public User findUserByUserName(String username) {
+		return userMapper.findUserByUserName(username);
+	}
+
 
 }

@@ -23,4 +23,9 @@
 	 )
 	</insert>	
 	
+	<!-- 根据用户名查询用户 -->
+	<select id="findUserByUserName" resultType="lego.pojo.User">
+		select * from user_p where username = ${username}
+	</select>
+	
 </mapper>

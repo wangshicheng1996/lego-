@@ -10,5 +10,7 @@ public interface UserService {
 	User findUserByUP(String userName, String password);
 	//保存用户
 	void saveUser(User user);
+	//根据用户名查询用户
+	User findUserByUserName(String username);
 
 }

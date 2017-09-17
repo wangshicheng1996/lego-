@@ -9,5 +9,7 @@ public interface UserMapper {
 	User findUserByUP(@Param("username")String username, @Param("password")String password);
 	//保存用户
 	void saveUser(User user);
+	//根据用户名查询用户
+	User findUserByUserName(String username);
 
 }
