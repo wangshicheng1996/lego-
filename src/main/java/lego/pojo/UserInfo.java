@@ -2,13 +2,11 @@ package lego.pojo;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
 /**
  * 用户详细信息表
  * @author Administrator
  *
  */
-@Entity(name="user_info_p")
 public class UserInfo {
 	private String userInfoId;//用户信息id
 	private String name;//真实姓名

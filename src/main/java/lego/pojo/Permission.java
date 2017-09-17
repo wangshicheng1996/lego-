@@ -1,6 +1,5 @@
 package lego.pojo;
 
-import javax.persistence.Entity;
 
 /**
  * 用户权限:1-超级管理员
@@ -9,7 +8,6 @@ import javax.persistence.Entity;
  * @author Administrator
  *
  */
-@Entity(name="permission_p")
 public class Permission {
 	private String permissionId;//权限id
 	private String permissionName;//权限名称

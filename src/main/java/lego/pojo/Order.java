@@ -2,14 +2,12 @@ package lego.pojo;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
 
 /**
  * 订单表
  * @author Administrator
  *
  */
-@Entity(name="order_p")
 public class Order {
 	private Address address;//收货地址
 	private User user;//用户

@@ -1,13 +1,11 @@
 package lego.pojo;
 
-import javax.persistence.Entity;
 
 /**
  * 订单商品关联表
  * @author Administrator
  *
  */
-@Entity(name="orderitems")
 public class OrderItems {
 	private String orderId;//订单id
 	private String productId;//商品id

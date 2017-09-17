@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.tarena.ht.mapper.DeptMapper">
+<mapper namespace="lego.mapper.OrderMapper">
 	
 	
 	<!--由于开启了别名包,所以在映射时会自动的拼接包路径  -->
@@ -13,10 +13,10 @@
 		
 	</select>
 	
-	<resultMap type="Order" id="orderRM" autoMapping="true">
+	<resultMap type="lego.pojo.Order" id="orderRM" autoMapping="true">
 		<id column="order_id" property="orderId"/>
 		
-		<association property="user" javaType="User">
+		<association property="user" javaType="lego.pojo.User">
 			<id column="user_id" property="user"/>
 		</association>
 	</resultMap>
@@ -39,47 +39,6 @@
 			</foreach>
 		)
 	</update>
-	
-	
-	<!--新增部门  -->
-	<insert id="saveDept">
-		insert into dept_p(dept_id,dept_name,parent_id,state,create_time,update_time)
-		values(
-			#{deptId},
-			#{deptName},
-			#{parentDept.deptId},
-			#{state},
-			#{createTime},
-			#{updateTime}
-		)
-	</insert>
-	
-	<!--查询部门信息  -->
-	<select id="findDeptById" resultMap="deptRM">
-		select * from 
-		dept_p d
-		       left join
-		(select dept_id p_id, dept_name p_name from dept_p) p
-		       on d.parent_id = p.p_id
-		where dept_id = #{deptId}
-	</select>
-	
-	
-	<!--查询排除自己之外的数据  -->
-	<select id="findParentList" resultType="Dept">
-		 select * from dept_p where dept_id not in (#{deptid})
-	</select>
-	
-	
-	<update id="updateDept">
-		update dept_p set 
-		dept_name = #{deptName},
-		parent_id = #{parentDept.deptId},
-		state =  #{state},
-		update_time = #{updateTime}
-		where dept_id = #{deptId}	
-	</update>
-	
 	
 	
 </mapper>
