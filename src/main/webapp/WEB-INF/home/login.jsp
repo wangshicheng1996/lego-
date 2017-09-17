@@ -50,6 +50,11 @@
 								<a href="register.html" class="zcnext am-fr am-btn-default">注册</a>
 								<br />
             </div>
+           <div>
+				<c:if test="${!empty errorInfo}">
+					${errorInfo}
+				</c:if>
+			</div>
 								<div class="am-cf">
 									<input type="submit" name="" value="登 录" class="am-btn am-btn-primary am-btn-sm">
 								</div>
