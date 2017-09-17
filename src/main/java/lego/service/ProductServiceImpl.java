@@ -32,4 +32,9 @@ public class ProductServiceImpl implements ProductService{
 		return row>0;
 	}
 
+	@Override
+	public List<Product> findAllProduct25(int m,int n) {
+		return productMapper.findAllProduct25(m,n);
+	}
+
 }

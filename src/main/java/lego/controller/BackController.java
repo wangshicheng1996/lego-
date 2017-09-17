@@ -8,10 +8,12 @@ import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
 
 import lego.pojo.Product;
 import lego.service.ProductService;
@@ -29,14 +31,16 @@ public class BackController {
 		return "/back/index";	
 	}
 	
-	//商品管理
+	//商品管理,只查前25
 	@RequestMapping("/back/product")
-	public String product(Model model){
+	public String product(Model model,int m,int n){
 		
 		//查询所有商品信息
-		List<Product> productList = productService.findAllProduct();
+		List<Product> productList = productService.findAllProduct25(m,n);
 		
 		model.addAttribute("productList", productList);
+		model.addAttribute("m", m);
+		model.addAttribute("n", n);
 		
 		return "/back/product";	
 	}
@@ -85,23 +89,24 @@ public class BackController {
 			
 	}
 	
-//	//添加商品数量
-//	@RequestMapping("/backAddProd")
-//	public String backAddProd(Product product,MultipartFile imgurl,HttpServletRequest req) throws IOException{
-//		String path=req.getSession().getServletContext().getRealPath("");
-//		
-//	//	String productImgurl="image"+ImagePath.getImagePath()+UUID.randomUUID().toString()+".jpg";
-//		
-//		if(imgurl!=null && imgurl.getSize()>0){
-//			FileUtils.writeByteArrayToFile(new File(path+productImgurl), imgurl.getBytes());
-//		}
+	//添加商品数量--------------待实现
+//		@RequestMapping("/backAddProd")
+//		public String backAddProd(Product product,MultipartFile imgurl,HttpServletRequest req) throws IOException{
+//			String path=req.getSession().getServletContext().getRealPath("");
 //			
-//		product.setProductImgurl(productImgurl.replaceAll("\\\\", "/"));
-//		
-//		productService.saveProd(product);
-//		
-//		return "redirect:/toManageProdList.action";
-//	}
+//		      	String productImgurl="image"+ImagePath.getImagePath()+UUID.randomUUID().toString()+".jpg";
+//			
+//			if(imgurl!=null && imgurl.getSize()>0){
+//				FileUtils.writeByteArrayToFile(new File(path+productImgurl), imgurl.getBytes());
+//			}
+//				
+//			product.setProductImgurl(productImgurl.replaceAll("\\\\", "/"));
+//			
+//			productService.saveProd(product);
+//			
+//			return "redirect:/toManageProdList.action";
+//		}
+	
 
 
 	

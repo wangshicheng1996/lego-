@@ -18,11 +18,13 @@
     <link rel="stylesheet" type="text/css" href="${ctx}/assets/css/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="${ctx}/assets/js/gritter/css/jquery.gritter.css" />
     <link rel="stylesheet" type="text/css" href="${ctx}/assets/lineicons/style.css">    
-    
     <!-- Custom styles for this template -->
     <link href="${ctx}/assets/css/style.css" rel="stylesheet">
     <link href="${ctx}/assets/css/style-responsive.css" rel="stylesheet">
     <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+    <!-- 分页 -->
+<link href="/try/bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">	
+
 	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -113,14 +115,10 @@
      
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li ><a class="logout" onclick="change()" >Logout</a></li>
+                    <li ><a class="logout" >商品管理</a></li>
             	</ul>
             </div>
-            <script type="text/javascript">
-						function change(){
-							alter("0000");
-						}
-			</script>
+
 			
         </header>
       <!--header end-->
@@ -187,7 +185,7 @@
 				<!-- 主体展示部分 -->
               <div class="row">
               	<h1 align="center">商品管理</h1>
-				<a style="margin-left: 750px;" href="${ctx}/backAddProd">添加商品</a>
+				<a style="margin-left: 750px;" href="${ctx}/backAddProd" hidden="hidden">添加商品</a>
 				<hr>
 				<table bordercolor="black" border="1" width="95%" cellspacing="0px" cellpadding="5px">
 					<tr>
@@ -215,7 +213,17 @@
 					</tr>
 				</c:forEach>
 				</table>
-			              
+				<!--分页  -->
+				    <ul class="pager">
+						<li>
+							<c:if test="${m==0}"><a href="/back/product?m=${m}&n=${n}">Previous</a></c:if>
+							<c:if test="${m!=0}"><a href="/back/product?m=${m-20}&n=${n-20}">Previous</a></c:if>
+						</li>
+						<li>
+							<a href="/back/product?m=${m+20}&n=${n+20}">Next</a>
+						</li>
+					</ul>        
+				<!-- +++++++++++++++++ -->
               </div>
           </section>
       </section>

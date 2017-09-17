@@ -80,6 +80,13 @@
       <artifactId>javax.servlet-api</artifactId>
     </dependency>
 
+	<!-- 图片上传 -->
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>2.4</version>
+	</dependency>
+
     <!--jstl依赖-->
     <dependency>
       <groupId>javax.servlet</groupId>

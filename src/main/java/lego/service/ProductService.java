@@ -13,5 +13,9 @@ public interface ProductService {
 
 	//根据商品ID修改商品数量
 	public boolean changeCount(String productId, Integer count);
+	
+	//显示25
+	public List<Product> findAllProduct25(int m,int n);
+
 
 }

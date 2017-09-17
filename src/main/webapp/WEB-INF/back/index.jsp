@@ -77,7 +77,7 @@
            
                   
                   <li class="sub-menu">
-                      <a href="/back/product" >
+                      <a href="/back/product?m=0&n=20" >
                           <i class="fa fa-th"></i>
                           <span>商品管理</span>
                       </a>
