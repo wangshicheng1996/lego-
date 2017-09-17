@@ -1,9 +1,13 @@
 package lego.pojo;
+
+import javax.persistence.Entity;
+
 /**
  * 商品分类等级表
  * @author Administrator
  *
  */
+@Entity(name="category_p")
 public class Category {
 	private Integer categoryId;//商品类别id
 	private String categoryName;//类名名称

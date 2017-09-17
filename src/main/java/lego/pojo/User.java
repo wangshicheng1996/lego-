@@ -1,11 +1,14 @@
 package lego.pojo;
 
 import java.util.List;
+
+import javax.persistence.Entity;
 /**
  * 用户表
  * @author Administrator
  *
  */
+@Entity(name="user_p")
 public class User {
 	private String userId;//用户id
 	private String username;//用户名

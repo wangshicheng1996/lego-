@@ -1,9 +1,13 @@
 package lego.pojo;
+
+import javax.persistence.Entity;
+
 /**
  * 购物车和收藏夹表单
  * @author Administrator
  *
  */
+@Entity(name="car_collection")
 public class CarAndCollection {
 	private User user;//用户对象
 	private Product product;//商品对象
