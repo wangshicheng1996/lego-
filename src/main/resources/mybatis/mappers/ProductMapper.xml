@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lego.mapper.ProductMapper">
+
+<!-- 查询商品的全部信息 -->
+<select id="findAllProduct" resultMap="productRM">
+	select * from product t	
+	left join	
+	(select * from category_p c 
+	left join 
+	(select category_id c_id,category_name c_name from category_p) p
+	on c.parent_level=p.c_id) g
+    on g.c_id=t.category_id 
+</select>
+<resultMap type="lego.pojo.Product" id="productRM" autoMapping="true">
+    <id column="product_id" property="productId"/>
+    
+    <association property="category" javaType="lego.pojo.Category">
+         <id column="category_id" property="categoryId"/>
+         <result column="category_name" property="categoryName"/>    
+    </association>
+
+</resultMap>
+
+
+</mapper>
