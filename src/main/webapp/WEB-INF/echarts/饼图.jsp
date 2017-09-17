@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main" style="width: 600px;height:400px;"></div>
+    <div id="main" style="margin:100px 400px;width: 1000px;height:600px;"></div>
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
@@ -32,7 +32,7 @@
 		    },
 		    series : [
 		        {
-		            name: '访问来源',
+		            name: '商品种类',
 		            type: 'pie',
 		            radius : '55%',
 		            center: ['50%', '60%'],
