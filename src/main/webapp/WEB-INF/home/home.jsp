@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ include file="../base.jsp" %>
+<%@ taglib uri="http://shiro.apache.org/tags" prefix="shiro"%>
 <!DOCTYPE HTML>
 <html >
 
@@ -44,8 +45,10 @@
 					</div>
 					<div class="topMessage favorite">
 						<div class="menu-hd"><a href="#" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>收藏夹</span></a></div>
+					</div>
+					
 				</ul>
-				</div>
+			</div>
 
 				<!--悬浮搜索框-->
 
@@ -79,10 +82,14 @@
                                 <li class="qc"><a href="#">团购</a></li>
                                 <li class="qc last"><a href="#">大包装</a></li>
 							</ul>
+							<shiro:hasPermission name="后台管理">
 						    <div class="nav-extra">
-						    	<i class="am-icon-user-secret am-icon-md nav-user"></i><b></b>我的福利
+						    	<a href="/back">
+						    	<i class="am-icon-user-secret am-icon-md nav-user"></i><b></b>后台管理
 						    	<i class="am-icon-angle-right" style="padding-left: 10px;"></i>
+						    	</a>
 						    </div>
+						    </shiro:hasPermission>
 						</div>
                 
 			    <div class="bannerTwo">

@@ -1,11 +1,16 @@
 package lego.shiro;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +25,16 @@ public class AuthRealm extends AuthorizingRealm{
 	//权限认证
 	@Override
 	protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection arg0) {
-		return null;
+		List<String> pList = new ArrayList<String>();
+		//获取用户的真实对象
+		User user = (User) SecurityUtils.getSubject().getPrincipal();
+		//判断用户的角色信息是否是管理员，如果是管理员，展现后台管理的按钮
+		if(user.getPermission().getPermissionName().equals("管理员") || user.getPermission().getPermissionName().equals("超级管理员")){
+			pList.add("后台管理");
+		}
+		SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
+		info.addStringPermissions(pList);
+		return info;
 	}
 
 	//登录认证
