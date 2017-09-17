@@ -262,7 +262,7 @@
 																<div class="item-status">
 																	<p class="Mystatus">交易成功</p>
 																	<p class="order-info"><a href="orderinfo.jsp">订单详情</a></p>
-																	<p class="order-info"><a href="logistics.jsp">查看物流</a></p>
+																	<p class="order-info"><a href="logistic.jsp">查看物流</a></p>
 																</div>
 															</li>
 															<li class="td td-change">
@@ -633,7 +633,7 @@
 																<div class="item-status">
 																	<p class="Mystatus">卖家已发货</p>
 																	<p class="order-info"><a href="orderinfo.jsp">订单详情</a></p>
-																	<p class="order-info"><a href="logistics.jsp">查看物流</a></p>
+																	<p class="order-info"><a href="logistic.jsp">查看物流</a></p>
 																	<p class="order-info"><a href="#">延长收货</a></p>
 																</div>
 															</li>
@@ -1097,7 +1097,7 @@
 																<div class="item-status">
 																	<p class="Mystatus">卖家已发货</p>
 																	<p class="order-info"><a href="orderinfo.jsp">订单详情</a></p>
-																	<p class="order-info"><a href="logistics.jsp">查看物流</a></p>
+																	<p class="order-info"><a href="logistic.jsp">查看物流</a></p>
 																	<p class="order-info"><a href="#">延长收货</a></p>
 																</div>
 															</li>
@@ -1196,7 +1196,7 @@
 																<div class="item-status">
 																	<p class="Mystatus">交易成功</p>
 																	<p class="order-info"><a href="orderinfo.jsp">订单详情</a></p>
-																	<p class="order-info"><a href="logistics.jsp">查看物流</a></p>
+																	<p class="order-info"><a href="logistic.jsp">查看物流</a></p>
 																</div>
 															</li>
 															<li class="td td-change">
@@ -1335,7 +1335,7 @@
 																<div class="item-status">
 																	<p class="Mystatus">交易成功</p>
 																	<p class="order-info"><a href="orderinfo.jsp">订单详情</a></p>
-																	<p class="order-info"><a href="logistics.jsp">查看物流</a></p>
+																	<p class="order-info"><a href="logistic.jsp">查看物流</a></p>
 																</div>
 															</li>
 															<li class="td td-change">
