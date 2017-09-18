@@ -1,5 +1,9 @@
 package lego.controller;
 
+import java.io.IOException;
+import java.util.Date;
+
+import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
@@ -13,9 +17,11 @@ import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import lego.mapper.UserMapper;
 import lego.pojo.User;
 import lego.service.UserService;
 import lego.tool.MD5HashPassword;
+import lego.tool.MailUtil;
 
 @Controller
 public class LoginController {
@@ -36,6 +42,8 @@ public class LoginController {
 			//转向到登录页面
 			return "/home/login";
 		}
+		
+		
 		//1.获取subject对象
 		Subject subject = SecurityUtils.getSubject();
 		//1-2.将用户输入的密码进行md5加密处理
@@ -79,24 +87,29 @@ public class LoginController {
 	
 	//注册提交
 	@RequestMapping("/saveUser")
-	public String savaregistration(User user){	
+	public void savaregistration(User user,String semail,HttpServletResponse response) throws Exception{	
 
 		userSerivce.saveUser(user);
-
+		int h = (new Date()).getHours();
+		//邮箱验证
+		MailUtil.send_mail(semail, user.getUserId(), h);
+		// 提示用户, 3秒之后跳转到首页
+		response.getWriter().write("<h1 style='color:red;text-align:center;'>请到邮箱进行激活操作, 激活之后注册成功...</h1>");
+		response.setHeader("refresh", "3;url="
+				+ "/index.jsp");
+		
+	}
+	//邮箱验证
+	@RequestMapping("/Email")
+	public String  email(String userId,int h,HttpServletResponse response) throws Exception{	
+//验证是否失效
+		//根据Id修改remark
+		userSerivce.updateRemark(userId);	
 		return "redirect:/login";
 	}
-	//验证
-	@RequestMapping("验证")
-	public String 验证(String userId,Integer h){	
-		//根据userId查询
-		
-		//对比查询到的结果与接受到的数据
-			
-		//一致则更改user中的remark
-			
-		//不一致定时转发，提示验证失败然后到首页
-		
-		return "返回登录界面";
-	}
 
+
+	
+	
+	
 }

@@ -18,6 +18,8 @@ public interface UserService {
 	List<User> findAllUser20(int m, int n);
 	//根据id删除用户
 	void deleteById(String userId);
+	//激活
+	void updateRemark(String userId);
 	
 
 }

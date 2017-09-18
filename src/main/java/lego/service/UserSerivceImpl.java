@@ -24,6 +24,7 @@ public class UserSerivceImpl  implements UserService{
 	public void saveUser(User user) {
 		user.setUserId(UUID.randomUUID().toString());
 		user.setUsername("admin");
+		user.setRemark("未激活");
 		String md5Password = MD5HashPassword.getPassword(user.getUsername(),user.getPassword());
 		user.setPassword(md5Password);
 		userMapper.saveUser(user);
@@ -59,6 +60,11 @@ public class UserSerivceImpl  implements UserService{
 	@Override
 	public void deleteById(String userId) {
 		userMapper.deleteById(userId);
+	}
+
+	@Override
+	public void updateRemark(String userId) {
+		userMapper.updateRemark(userId);
 	}
 
 

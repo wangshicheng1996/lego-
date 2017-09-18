@@ -46,7 +46,7 @@ public class MailUtil {
         //设置主题
         message.setSubject("注册成功，请进行邮箱验证");
         //设置邮件正文  第二个参数是邮件发送的类型
-        String s = "欢迎注册乐购商城，点击按钮进行账户验证</br>  <a href=\"http://localhost:8090/验证界面?userId="+userId+"&h="+h+"\"><button type=\"button\" style=\"color:blue\">点击完成验证</button></a>";
+        String s = "欢迎注册乐购商城，点击按钮进行账户验证</br>  <a href=\"http://localhost:8090/Email?userId="+userId+"&h="+h+"\"><button type=\"button\" style=\"color:blue\">点击完成验证</button></a>";
 //        message.setContent(s, "text/html;charset=gbk");
         message.setContent(s,"text/html;charset=UTF-8");
         //发送一封邮件
