@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -85,7 +86,7 @@
    
 
                   <li class="sub-menu">
-                      <a href="/back/user" >
+                      <a href="/back/user?m=0&n=20" >
                           <i class="fa fa-desktop"></i>
                           <span>用户管理</span>
                       </a>

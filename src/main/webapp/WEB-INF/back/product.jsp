@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -141,7 +142,7 @@
            
                   
                   <li class="sub-menu">
-                      <a href="/back/product" >
+                      <a href="/back/product?m=0&n=20" >
                           <i class="fa fa-th"></i>
                           <span>商品管理</span>
                       </a>
@@ -149,7 +150,7 @@
 
 
                   <li class="sub-menu">
-                      <a href="/back/user" >
+                      <a href="/back/user?m=0&n=20" >
                           <i class="fa fa-desktop"></i>
                           <span>用户管理</span>
                       </a>
@@ -164,7 +165,7 @@
                   <li class="sub-menu">
                       <a href="/back/sale" >
                           <i class="fa fa-book"></i>
-                          <span>销售榜单</span> 
+                          <span>销售榜单</span>
                       </a>
                   
                   </li>

@@ -1,5 +1,6 @@
 package lego.service;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +48,17 @@ public class UserSerivceImpl  implements UserService{
 	//根据用户名查询用户
 	public User findUserByUserName(String username) {
 		return userMapper.findUserByUserName(username);
+	}
+
+	//查询用户20条
+	@Override
+	public List<User> findAllUser20(int m, int n) {
+		return userMapper.findAllUser20(m,n);
+	}
+
+	@Override
+	public void deleteById(String userId) {
+		userMapper.deleteById(userId);
 	}
 
 

@@ -24,7 +24,32 @@
 	
 	<!-- 根据用户名查询用户 -->
 	<select id="findUserByUserName" resultType="lego.pojo.User">
-		select * from user_p where username = ${username}
+		select * from user_p where username = #{username}
 	</select>
+	
+	<!-- 查询用户所有信息，20条 -->
+	<select id="findAllUser20" resultMap="userM">
+		SELECT * FROM user_p u,permission_p p,user_info_p info 
+			WHERE 
+				u.permission_id=p.permission_id 
+			AND 
+				u.user_id=info.user_info_id 
+		LIMIT  #{m},#{n}
+	</select>
+	<resultMap type="lego.pojo.User" id="userM" autoMapping="true">
+		<association property="userInfo" javaType="lego.pojo.UserInfo">
+			<id  column="user_info_p" property="userInfoId"/>
+			<result column="name" property="name"/>
+			<result column="gender" property="gender"/>
+			<result column="card_no" property="cardNo"/>
+			<result column="birthday" property="birthday"/>
+			<result column="telephone" property="telephone"/>
+			<result column="email" property="email"/>
+		</association>
+		<association property="permission" javaType="lego.pojo.Permission">
+			<result column="permission_name" property="permissionName"/>
+		</association>
+	</resultMap>
+	
 	
 </mapper>

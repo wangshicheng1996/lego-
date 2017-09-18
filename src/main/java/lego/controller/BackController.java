@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
 import lego.pojo.Product;
+import lego.pojo.User;
 import lego.service.ProductService;
+import lego.service.UserService;
 
 //后台管理
 @Controller
@@ -24,6 +26,8 @@ public class BackController {
 	
 	@Autowired
 	ProductService productService;
+	@Autowired
+	UserService userService;
 	
 	//后台管理首页
 	@RequestMapping("/back")
@@ -46,7 +50,13 @@ public class BackController {
 	
 	//用户管理
 	@RequestMapping("/back/user")
-	public String user(){
+	public String user(Model model,int m,int n){
+		//查询所有用户信息
+		List<User> userList = userService.findAllUser20(m,n);
+		
+		model.addAttribute("userList", userList);
+		model.addAttribute("m", m);
+		model.addAttribute("n", n);
 		return "/back/user";	
 	}
 	
@@ -75,14 +85,14 @@ public class BackController {
 		//根据id删除商品
 		productService.deleteById(productId);
 		
-		return "redirect:/back/product";	
+		return "redirect:/back/product?m=0&n=20";	
 	}
 	
 	//商品管理中根据id商品修改商品数量
 	@RequestMapping("/BackAjaxChangeCount")
 	public void BackAjaxChangeCount(String productId,Integer count,HttpServletResponse response) throws IOException{
 		
-		//根据id删除商品
+		//根据id修改商品
 		boolean flag = productService.changeCount(productId,count);
 		response.getWriter().write(""+flag);
 			
@@ -107,6 +117,15 @@ public class BackController {
 //		}
 	
 
+	//用户管理中删除根据id
+	@RequestMapping("/BackUserDelete")
+	public String BackUserDelete(String userId){
+		
+		//根据id删除用户
+		userService.deleteById(userId);
+		
+		return "redirect:/back/user?m=0&n=20";	
+	}
 
 	
 	

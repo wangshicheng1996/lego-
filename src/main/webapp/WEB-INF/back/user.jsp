@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,6 +20,8 @@
     <link rel="stylesheet" type="text/css" href="${ctx}/assets/js/gritter/css/jquery.gritter.css" />
     <link rel="stylesheet" type="text/css" href="${ctx}/assets/lineicons/style.css">    
     
+    <!-- 分页 -->
+    <link href="/try/bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">	
     <!-- Custom styles for this template -->
     <link href="${ctx}/assets/css/style.css" rel="stylesheet">
     <link href="${ctx}/assets/css/style-responsive.css" rel="stylesheet">
@@ -37,6 +41,36 @@
    
     </style> 
     
+    
+    <!-- 表格 -->
+    
+    <style type="text/css">	
+		table {
+			text-align: center;
+			margin: 0px auto;
+		}
+		th {
+			background-color: silver;
+		}
+		</style>
+		<script type="text/javascript" src="${ctx}/js/jquery-1.4.2.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			$(".del").click(function(){
+				//获取用户id
+				var id = $(this).parent().prev().prev().
+					children("input[type='text']").attr("id");
+				//判断是否确认删除
+				if(confirm("您确定删除吗？")){
+					window.location.href="${app}/BackUserDelete?userId="+id;
+				}
+			});
+		});
+		</script>
+    
+    
+    <!-- +++++++++++++++++++ -->
+    
   </head>
 
   <body>
@@ -53,7 +87,7 @@
      
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.jsp">Logout</a></li>
+                    <li><a class="logout" href="login.jsp">用户管理</a></li>
             	</ul>
             </div>
         </header>
@@ -119,10 +153,45 @@
           <section class="wrapper">
 
               <div class="row">
-              		</br></br></br></br></br></br></br></br>
-					 <p id="legoid" align="center">用户</p>
-					 <p id="legoid" align="center">乐购欢迎你</p>
-              </div><! --/row -->
+              		<h1 align="center">用户管理</h1>
+				<hr>
+				<table bordercolor="black" border="1" width="95%" cellspacing="0px" cellpadding="5px">
+					<tr >
+						<th>用户名</th>
+						<th>用户id</th>
+						<th>用户级别</th>
+						<th>Email</th>
+						<th>证件号</th>
+						<th>生日</th>
+						<th>联系方式</th>
+						<th>操作</th>
+					</tr>
+				<c:forEach items="${userList}" var="user">
+					<tr>
+						<td>${user.username }</td>
+						<td>${user.userId }</td>
+						<td>${user.permission.permissionName }</td>
+						<td>${user.userInfo.email}</td>
+						<td>${user.userInfo.cardNo}</td>
+						<td><input id="${user.userId}" name="birthday" type="text" value="${user.userInfo.birthday }" readonly="readonly"/>
+							<input type="hidden" /> 
+						</td>
+						<td>${user.userInfo.telephone}</td>
+						<td><a href="javascript:void(0)" class="del">删除</a></td>
+					</tr>
+				</c:forEach>
+				</table>
+				<!--分页  -->
+				    <ul class="pager">
+						<li>
+							<c:if test="${m==0}"><a href="/back/user?m=${m}&n=${n}">Previous</a></c:if>
+							<c:if test="${m!=0}"><a href="/back/user?m=${m-20}&n=${n-20}">Previous</a></c:if>
+						</li>
+						<li>
+							<a href="/back/user?m=${m+20}&n=${n+20}">Next</a>
+						</li>
+					</ul>        
+              </div>
           </section>
       </section>
 
