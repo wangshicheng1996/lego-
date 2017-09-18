@@ -16,6 +16,7 @@ public class UserInfo {
 	private String telephone;//电话
 	private String email;//邮箱
 	
+	
 	public String getUserInfoId() {
 		return userInfoId;
 	}

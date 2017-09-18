@@ -1,5 +1,10 @@
 package lego.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,8 +27,9 @@ public class UserInfoController extends BaseController {
 	
 	//查看用户信息
 	@RequestMapping("/toview")
-	public String toView(String userId,Model model){
-		userId="2";	
+	public String toView(HttpSession session,String userId,Model model){
+		userId="2";
+		session.setAttribute("userId", userId);
 		UserInfo userinfolist = userInfoServicce.findUserByUid(userId);
 			
 		model.addAttribute("userinfolist", userinfolist);
@@ -31,7 +37,7 @@ public class UserInfoController extends BaseController {
 		return "/person/information";
 	}
 	//修改密码
-	@RequestMapping("/person/123")
+	@RequestMapping("/person/savepassword")
 	public String changepassword(Model model,String username,String password,User user){
 		/**
 		 * 先进行是否登录判断,没有登录则跳转到登录界面，
@@ -45,20 +51,20 @@ public class UserInfoController extends BaseController {
 		String md5password=MD5HashPassword.getPassword(username, password);
 		user.setPassword(md5password);
 		model.addAttribute("user",user);
-		return "/person/password.";
+		return "/person/password";
 	}
 	//修改密码提交
-	@RequestMapping("/person/savepassword")
+	@RequestMapping("/person/baocunmima")
 	public String savepassword(User user){
 	//  userService.updatepasword(user);
 		return "/home/login";
 	}
 	//个人信息修改
 	@RequestMapping("/person/information") 
-	public String changemsg(String userId,Model model){	
+	public String changemsg(String userId,Model model,HttpSession session){	
 		//通过userId将个人详细信息查询出来
-		userId="213";
-		UserInfo userinfolist=userInfoServicce.findUserInfoById(userId);
+		userId="2";
+		UserInfo userinfolist=userInfoServicce.findUserInfoById(userId);	
 		model.addAttribute("userinfolist",userinfolist);
 		return "/person/information";
 	}

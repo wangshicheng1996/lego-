@@ -42,8 +42,7 @@ public class LoginController {
 			//转向到登录页面
 			return "/home/login";
 		}
-		
-		
+			
 		//1.获取subject对象
 		Subject subject = SecurityUtils.getSubject();
 		//1-2.将用户输入的密码进行md5加密处理

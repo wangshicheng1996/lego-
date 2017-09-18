@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ include file="../base.jsp" %>
 
 <!DOCTYPE html>
@@ -125,7 +125,7 @@
 							<form class="am-form am-form-horizontal" method="post" action="${ctx }/person/saveuserinfo">
 							
 							
-							
+							<input type="hidden" name="userInfoId" value="${userinfolist.userInfoId}"  />
 								<div class="am-form-group" >
 									<label for="user-name" class="am-form-label">姓名</label>
 									<div class="am-form-content">
@@ -154,10 +154,9 @@
 							<div class="am-form-group" >
 									<label for="user-name" class="am-form-label">生日</label>
 									<div class="am-form-content">
-									
-										<input type="text" style="width:121px;" name="birthday" value="2017-01-03"
-										<fmt:formatDate value="${userinfolist.birthday}" pattern="yyyy -MM-dd"/>
-										onclick="WdatePicker({el:this,isShowOthers:true,dateFmt:'yyyy-MM-dd'});" />
+										<input type="text" style="width:121px" name="birthdays"  value="2017-5-5"
+										<fmt:formatDate value="${userinfolist.birthday}"  pattern="yyyy-MM-dd"/>
+										onclick="WdatePicker({el:this,isShowOthers:true,dateFmt:'yyyy-MM-dd'});"/>
 									</div>
 								</div>
 
@@ -211,7 +210,7 @@
 								</div>
 								<div class="info-btn">
 									
-									<input type="submit" value="保存修改">
+								<input type="submit" value="保存修改">
 								
 									</div>
 							
