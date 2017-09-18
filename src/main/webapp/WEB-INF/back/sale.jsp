@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,7 +38,20 @@
 		}
    
     </style> 
+    <!-- +++++++++++++++++++++++++++++++ -->
+    <style type="text/css">
+						
+		table {
+			text-align: center;
+			margin: 0px auto;
+		}
+		
+		th {
+			background-color: silver;
+		}
+	</style>
     
+    <!-- +++++++++++++++++++++++++++++++ -->
   </head>
 
   <body>
@@ -53,7 +68,7 @@
      
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.jsp">Logout</a></li>
+                    <li><a class="logout" href="login.jsp">销售管理</a></li>
             	</ul>
             </div>
         </header>
@@ -76,16 +91,16 @@
                   </li>
            
                   
-                  <li class="sub-menu">
-                      <a href="/back/product" >
+                   <li class="sub-menu">
+                      <a href="/back/product?m=0&n=20" >
                           <i class="fa fa-th"></i>
                           <span>商品管理</span>
                       </a>
                   </li>
-
+   
 
                   <li class="sub-menu">
-                      <a href="/back/user" >
+                      <a href="/back/user?m=0&n=20" >
                           <i class="fa fa-desktop"></i>
                           <span>用户管理</span>
                       </a>
@@ -119,10 +134,23 @@
           <section class="wrapper">
 
               <div class="row">
-              		</br></br></br></br></br></br></br></br>
-					 <p id="legoid" align="center">销售</p>
-					 <p id="legoid" align="center">乐购欢迎你</p>
-              </div><! --/row -->
+              		<h1 align="center" >销售榜单</h1>
+					<a href="${ctx}/SalesDownLoad" style="margin-left: 700px">销售榜单下载</a>
+					<hr>
+					<table bordercolor="black" border="1" width="95%" cellspacing="0px" cellpadding="5px">
+						<tr>
+							<th style="text-align:center;">商品名称</th>
+							<th style="text-align:center;">销售总量</th>
+						</tr>
+					<c:forEach items="${salesList}" var="sale">
+							<tr>
+								<td>${sale.product.name }</td>
+								<td>${sale.number }</td>
+							</tr>
+					</c:forEach>
+				
+					</table>
+			  </div>
           </section>
       </section>
 

@@ -190,14 +190,14 @@
 				<hr>
 				<table bordercolor="black" border="1" width="95%" cellspacing="0px" cellpadding="5px">
 					<tr>
-						<th>商品名称</th>
-						<th>商品id</th>
-						<th>商品种类</th>
-						<th>商品成本</th>
-						<th>商品售价</th>
-						<th>库存数量</th>
-						<th>描述信息</th>
-						<th>操作</th>
+						<th style="text-align:center;">商品名称</th>
+						<th style="text-align:center;">商品id</th>
+						<th style="text-align:center;">商品种类</th>
+						<th style="text-align:center;">商品成本</th>
+						<th style="text-align:center;">商品售价</th>
+						<th style="text-align:center;">库存数量</th>
+						<th style="text-align:center;">描述信息</th>
+						<th style="text-align:center;">操作</th>
 					</tr>
 				<c:forEach items="${productList}" var="prod">
 					<tr>

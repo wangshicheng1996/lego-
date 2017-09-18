@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,7 +37,43 @@
 			letter-spacing: 8.2pt;
 		}
    
-    </style> 
+    </style>
+    
+    <!-- ++++++++++++++++++++++++++++++++++++ --> 
+    <style type="text/css">
+				
+		table {
+			text-align: center;
+			margin: 0px auto;
+		}
+		th {
+			background-color: silver;
+		}
+		</style>
+		<script type="text/javascript" src="${ctx}/js/jquery-1.4.2.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			$(".user").click(function(){
+				//获取商品id
+				var id = $(this).parent().prev().
+					children("input[type='text']").attr("id");
+				//判断是否确认删除
+				if(confirm("您确定将该用户设为普通用户吗？")){
+					window.location.href="${ctx}/BackUpdateUser?userId="+id;
+				}
+			});
+			$(".admin").click(function(){
+				//获取商品id
+				var id = $(this).parent().prev().prev().
+					children("input[type='text']").attr("id");
+				//判断是否确认删除
+				if(confirm("您确定将该用户设为管理员吗？")){
+					window.location.href="${ctx}/BackUpdateAdmin?userId="+id;
+				}
+			});
+		});
+		</script>
+    <!-- ++++++++++++++++++++++++++++++++++++ --> 
     
   </head>
 
@@ -53,7 +91,7 @@
      
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.jsp">Logout</a></li>
+                    <li><a class="logout" href="login.jsp">权限管理</a></li>
             	</ul>
             </div>
         </header>
@@ -76,16 +114,16 @@
                   </li>
            
                   
-                  <li class="sub-menu">
-                      <a href="/back/product" >
+                    <li class="sub-menu">
+                      <a href="/back/product?m=0&n=20" >
                           <i class="fa fa-th"></i>
                           <span>商品管理</span>
                       </a>
                   </li>
-
+   
 
                   <li class="sub-menu">
-                      <a href="/back/user" >
+                      <a href="/back/user?m=0&n=20" >
                           <i class="fa fa-desktop"></i>
                           <span>用户管理</span>
                       </a>
@@ -119,10 +157,35 @@
           <section class="wrapper">
 
               <div class="row">
-              		</br></br></br></br></br></br></br></br>
-					 <p id="legoid" align="center">权限</p>
-					 <p id="legoid" align="center">乐购欢迎你</p>
-              </div><! --/row -->
+              		<h1 align="center">权限管理</h1>
+						<hr>
+						<table bordercolor="black" border="1" width="95%" cellspacing="0px" cellpadding="5px">
+							<tr >
+								<th style="text-align:center;">用户名</th>
+								<th style="text-align:center;">用户id</th>
+								<th style="text-align:center;">用户级别</th>
+								<th hidden="hidden">Email</th>
+								<th hidden="hidden">证件号</th>
+								<th hidden="hidden">生日</th>
+								<th style="text-align:center;">操作</th>
+								<th style="text-align:center;">操作</th>
+							</tr>
+						<c:forEach items="${userList}" var="user">
+							<tr>
+								<td>${user.username }</td>
+								<td>${user.userId }</td>
+								<td>${user.permission.permissionName }</td>
+								<td hidden="hidden">${user.userInfo.email}</td>
+								<td hidden="hidden">${user.userInfo.cardNo}</td>
+								<td hidden="hidden"><input id="${user.userId}" name="birthday" type="text" value="${user.userInfo.birthday }" readonly="readonly"/>
+								</td>
+								<td><a href="javascript:void(0)"  class="user">设为用户</td>
+								<td><a href="javascript:void(0)" class="admin">设为管理员</a></td>
+							</tr>
+						</c:forEach>
+						</table>
+	  
+              </div>
           </section>
       </section>
 

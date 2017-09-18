@@ -20,6 +20,8 @@ public interface UserService {
 	void deleteById(String userId);
 	//激活
 	void updateRemark(String userId);
+	//级别改变
+	void updateUser(String userId,String string);
 	
 
 }

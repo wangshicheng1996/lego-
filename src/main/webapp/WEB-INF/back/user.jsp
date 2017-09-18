@@ -110,16 +110,16 @@
                   </li>
            
                   
-                  <li class="sub-menu">
-                      <a href="/back/product" >
+                     <li class="sub-menu">
+                      <a href="/back/product?m=0&n=20" >
                           <i class="fa fa-th"></i>
                           <span>商品管理</span>
                       </a>
                   </li>
-
+   
 
                   <li class="sub-menu">
-                      <a href="/back/user" >
+                      <a href="/back/user?m=0&n=20" >
                           <i class="fa fa-desktop"></i>
                           <span>用户管理</span>
                       </a>
@@ -157,14 +157,14 @@
 				<hr>
 				<table bordercolor="black" border="1" width="95%" cellspacing="0px" cellpadding="5px">
 					<tr >
-						<th>用户名</th>
-						<th>用户id</th>
-						<th>用户级别</th>
-						<th>Email</th>
-						<th>证件号</th>
-						<th>生日</th>
-						<th>联系方式</th>
-						<th>操作</th>
+						<th style="text-align:center;">用户名</th>
+						<th style="text-align:center;">用户id</th>
+						<th style="text-align:center;">用户级别</th>
+						<th style="text-align:center;">Email</th>
+						<th style="text-align:center;">证件号</th>
+						<th style="text-align:center;">生日</th>
+						<th style="text-align:center;">联系方式</th>
+						<th style="text-align:center;">操作</th>
 					</tr>
 				<c:forEach items="${userList}" var="user">
 					<tr>
@@ -173,7 +173,7 @@
 						<td>${user.permission.permissionName }</td>
 						<td>${user.userInfo.email}</td>
 						<td>${user.userInfo.cardNo}</td>
-						<td><input id="${user.userId}" name="birthday" type="text" value="${user.userInfo.birthday }" readonly="readonly"/>
+						<td><input id="${user.userId}" name="birthday" type="text" value="2017-01-01" readonly="readonly"/>
 							<input type="hidden" /> 
 						</td>
 						<td>${user.userInfo.telephone}</td>

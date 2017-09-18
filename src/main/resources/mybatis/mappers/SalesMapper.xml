@@ -6,7 +6,14 @@
 
 <!-- 查询全部商品的销售信息 -->
 <select id="findAllSales" resultMap="salesRM">
-	SELECT product.name,SUM(sales.sale_count) number FROM sales,product WHERE product.product_id = sales.product_id GROUP BY sales.product_id ORDER BY number desc
+	SELECT product.name,SUM(sales.sale_count) number 
+		FROM sales,product   
+	WHERE   
+	product.product_id = sales.product_id  
+	GROUP BY 
+		sales.product_id  
+	ORDER BY 
+		number desc
 </select>
 <resultMap type="lego.pojo.Sales" id="salesRM">
 	<!-- 完成主表映射 -->

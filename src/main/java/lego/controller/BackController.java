@@ -16,8 +16,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
 import lego.pojo.Product;
+import lego.pojo.Sales;
 import lego.pojo.User;
 import lego.service.ProductService;
+import lego.service.SalesService;
 import lego.service.UserService;
 
 //后台管理
@@ -28,6 +30,8 @@ public class BackController {
 	ProductService productService;
 	@Autowired
 	UserService userService;
+	@Autowired
+	SalesService salesService;
 	
 	//后台管理首页
 	@RequestMapping("/back")
@@ -62,15 +66,29 @@ public class BackController {
 	
 	//权限管理
 	@RequestMapping("/back/permissions")
-	public String permissions(){
+	public String permissions(Model model){
+		//查询所有用户信息
+		List<User> userList = userService.findAllUser20(0,20);	
+		model.addAttribute("userList", userList);
+		
 		return "/back/permissions";	
 	}
 	
 	//销售管理
 	@RequestMapping("/back/sale")
-	public String sale(){
+	public String sale(Model model){
+		//查询所有商品销售表
+		List<Sales> salesList = salesService.findAllSales();
+		model.addAttribute("salesList", salesList);
 		return "/back/sale";	
 	}
+	
+	
+	
+	
+	
+	
+	
 	
 	//重定向到商城首页
 	@RequestMapping("/back/index")
@@ -125,6 +143,27 @@ public class BackController {
 		userService.deleteById(userId);
 		
 		return "redirect:/back/user?m=0&n=20";	
+	}
+	
+	//用户管理---设为普通用户
+	@RequestMapping("/BackUpdateUser")
+	public String BackUpdateUser(String userId){
+		
+		//将用户设为普通用户
+		userService.updateUser(userId,"3");
+		
+		
+		return "redirect:/back/permissions";	
+	}
+	
+	//用户管理---设为管理员
+	@RequestMapping("/BackUpdateAdmin")
+	public String BackUpdateAdmin(String userId){
+		
+		//将用户设为管理员
+		userService.updateUser(userId,"2");
+		
+		return "redirect:/back/permissions";	
 	}
 
 	

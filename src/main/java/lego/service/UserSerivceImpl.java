@@ -67,5 +67,11 @@ public class UserSerivceImpl  implements UserService{
 		userMapper.updateRemark(userId);
 	}
 
+	//修改用户级别
+	@Override
+	public void updateUser(String userId,String string) {
+		userMapper.updateUser(userId,string);
+	}
+
 
 }

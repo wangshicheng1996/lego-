@@ -24,5 +24,8 @@ public interface UserMapper {
 	//激活
 	@Update("update user_p set remark='激活' where user_id = #{userId}")
 	void updateRemark(String userId);
+	//修改用户级别
+	@Update("update user_p set permission_id=#{string} where user_id = #{userId}")
+	void updateUser(@Param("userId")String userId,@Param("string")String string);
 
 }
