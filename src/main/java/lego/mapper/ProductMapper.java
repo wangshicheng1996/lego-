@@ -12,7 +12,7 @@ import lego.pojo.Product;
 public interface ProductMapper {
 
 	public List<Product> findAllProduct();
-
+  
 	//根据商品id删除商品
 	@Delete("delete from product where product_id = #{productId}")
 	public void deleteById(String productId);

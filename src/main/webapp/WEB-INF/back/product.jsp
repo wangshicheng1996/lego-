@@ -164,7 +164,7 @@
                   <li class="sub-menu">
                       <a href="/back/sale" >
                           <i class="fa fa-book"></i>
-                          <span>销售榜单</span>
+                          <span>销售榜单</span> 
                       </a>
                   
                   </li>

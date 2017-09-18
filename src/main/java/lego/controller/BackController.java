@@ -34,7 +34,6 @@ public class BackController {
 	//商品管理,只查前25
 	@RequestMapping("/back/product")
 	public String product(Model model,int m,int n){
-		
 		//查询所有商品信息
 		List<Product> productList = productService.findAllProduct25(m,n);
 		
