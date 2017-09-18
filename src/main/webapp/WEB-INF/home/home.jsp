@@ -74,8 +74,8 @@
 					   <div class="nav-cont">
 							<ul>
 								<li class="index"><a href="#">首页</a></li>
-                                <li class="qc"><a href="#">闪购</a></li>
-                                <li class="qc"><a href="#">限时抢</a></li>
+                                <li class="qc"><a href="#jianguo1">坚果</a></li>
+                                <li class="qc"><a href="#tianpin2">甜品</a></li>
                                 <li class="qc"><a href="#">团购</a></li>
                                 <li class="qc last"><a href="#">大包装</a></li>
 							</ul>
@@ -1546,7 +1546,7 @@
 					<!--坚果-->
 					<div class="am-container ">
 						<div class="shopTitle ">
-							<h4 class="floor-title">坚果</h4>
+							<a name="jianguo1"><h4 class="floor-title">坚果</h4></a>
 							<div class="floor-subtitle"><em class="am-icon-caret-left"></em><h3>酥酥脆脆，回味无穷</h3></div>
 							<div class="today-brands " style="right:0px ;top:13px">
 								<a href="# ">腰果</a>|
@@ -1684,7 +1684,7 @@
 					
 					<div class="am-container " >
 						<div class="shopTitle ">
-							<h4 class="floor-title">甜品</h4>
+						<a name="tianpin2"><h4 class="floor-title">甜品</h4></a>
 							<div class="floor-subtitle"><em class="am-icon-caret-left"></em><h3>每一道甜品都有一个故事</h3></div>
 							<div class="today-brands " style="right:0px ;top:13px;">
 								<a href="# ">桂花糕</a>|
