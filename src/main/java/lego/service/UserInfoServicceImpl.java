@@ -12,8 +12,7 @@ public class UserInfoServicceImpl implements UserInfoServicce {
 	private UserInfoMapper userInfoMapper;
 
 	@Override
-	public UserInfo findUserByUid(String userId) {
-		
+	public UserInfo findUserByUid(String userId) {		
 		return userInfoMapper.findUserByUid(userId);
 	}
 
@@ -25,6 +24,7 @@ public class UserInfoServicceImpl implements UserInfoServicce {
 
 	//修改个人信息
 	public void updateUserInfomsg(UserInfo userinfo) {
+		
 		userInfoMapper.updateUserInfomsg(userinfo);
 		
 	}

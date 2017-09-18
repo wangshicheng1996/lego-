@@ -13,7 +13,7 @@ import lego.tool.MD5HashPassword;
 import lego.tool.MD5Utils;
 
 @Controller
-public class UserInfoController {
+public class UserInfoController extends BaseController {
 	@Autowired
 	private UserInfoServicce userInfoServicce;
 	@Autowired
@@ -23,15 +23,15 @@ public class UserInfoController {
 	//查看用户信息
 	@RequestMapping("/toview")
 	public String toView(String userId,Model model){
+		userId="2";	
+		UserInfo userinfolist = userInfoServicce.findUserByUid(userId);
 			
-		UserInfo user = userInfoServicce.findUserByUid(userId);
-			
-		model.addAttribute("user", user);
+		model.addAttribute("userinfolist", userinfolist);
 			
 		return "/person/information";
 	}
 	//修改密码
-	@RequestMapping("/person/password")
+	@RequestMapping("/person/123")
 	public String changepassword(Model model,String username,String password,User user){
 		/**
 		 * 先进行是否登录判断,没有登录则跳转到登录界面，
@@ -45,29 +45,31 @@ public class UserInfoController {
 		String md5password=MD5HashPassword.getPassword(username, password);
 		user.setPassword(md5password);
 		model.addAttribute("user",user);
-		return "/person/password";
+		return "/person/password.";
 	}
 	//修改密码提交
 	@RequestMapping("/person/savepassword")
 	public String savepassword(User user){
-	  //userService.updatepasword(user);
+	//  userService.updatepasword(user);
 		return "/home/login";
 	}
 	//个人信息修改
 	@RequestMapping("/person/information") 
-	public String changemsg(String userId,Model model){
-		
+	public String changemsg(String userId,Model model){	
 		//通过userId将个人详细信息查询出来
-		UserInfo userinfo=userInfoServicce.findUserInfoById(userId);
-		model.addAttribute("userinfo",userinfo);
+		userId="213";
+		UserInfo userinfolist=userInfoServicce.findUserInfoById(userId);
+		model.addAttribute("userinfolist",userinfolist);
 		return "/person/information";
 	}
 	//个人信息修改提交
 	@RequestMapping("/person/saveuserinfo")
-	public String savemsg(UserInfo userinfo){
-		userInfoServicce.updateUserInfomsg(userinfo);
+	public String savemsg(UserInfo userInfo){
 		
-		return "/person/password";
+	
+		userInfoServicce.updateUserInfomsg(userInfo);
+		
+		return "redirect:/person/information";
 	}
 	//我的订单
 	@RequestMapping("/person/order")
