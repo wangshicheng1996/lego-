@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<%@ include file="../base.jsp" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 
@@ -9,11 +9,11 @@
 
 		<title>我的收藏</title>
 
-		<link href="${ctx}/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
-		<link href="${ctx}/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
 
-		<link href="${ctx}/css/personal.css" rel="stylesheet" type="text/css">
-		<link href="${ctx}/css/colstyle.css" rel="stylesheet" type="text/css">
+		<link href="../css/personal.css" rel="stylesheet" type="text/css">
+		<link href="../css/colstyle.css" rel="stylesheet" type="text/css">
 
 	</head>
 
@@ -34,13 +34,13 @@
 						</ul>
 						<ul class="message-r">
 							<div class="topMessage home">
-								<div class="menu-hd"><a href="#" target="_top" class="h">商城首页</a></div>
+								<div class="menu-hd"><a href="/home.action" target="_top" class="h">商城首页</a></div>
 							</div>
 							<div class="topMessage my-shangcheng">
 								<div class="menu-hd MyShangcheng"><a href="#" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
 							</div>
 							<div class="topMessage mini-cart">
-								<div class="menu-hd"><a id="mc-menu-hd" href="#" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">0</strong></a></div>
+								<div class="menu-hd"><a id="mc-menu-hd" href="/shopcart.action" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">0</strong></a></div>
 							</div>
 							<div class="topMessage favorite">
 								<div class="menu-hd"><a href="#" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>收藏夹</span></a></div>
@@ -51,7 +51,7 @@
 
 						<div class="nav white">
 							<div class="logoBig">
-								<li><img src="${ctx}/images/logobig.png" /></li>
+								<li><img src="../images/logobig.png" /></li>
 							</div>
 
 							<div class="search-bar pr">
@@ -72,16 +72,16 @@
 					   <div class="long-title"><span class="all-goods">全部分类</span></div>
 					   <div class="nav-cont">
 							<ul>
-								<li class="index"><a href="#">首页</a></li>
+								<li class="index"><a href="/home.action">首页</a></li>
                                 <li class="qc"><a href="#">闪购</a></li>
                                 <li class="qc"><a href="#">限时抢</a></li>
                                 <li class="qc"><a href="#">团购</a></li>
                                 <li class="qc last"><a href="#">大包装</a></li>
 							</ul>
-						    <div class="nav-extra">
+						  <!--   <div class="nav-extra">
 						    	<i class="am-icon-user-secret am-icon-md nav-user"></i><b></b>我的福利
 						    	<i class="am-icon-angle-right" style="padding-left: 10px;"></i>
-						    </div>
+						    </div> -->
 						</div>
 			</div>
 			<b class="line"></b>
@@ -102,190 +102,42 @@
 								<a class="am-badge am-badge-danger am-round">降价</a>
 								<a class="am-badge am-badge-danger am-round">下架</a>
 							</div>
+							
 							<div class="s-content">
+							<c:forEach items="${cacList }" var="cac">
 								<div class="s-item-wrap">
 									<div class="s-item">
 
 										<div class="s-pic">
 											<a href="#" class="s-pic-link">
-												<img src="${ctx}/images/0-item_pic.jpg_220x220.jpg" alt="包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰" title="包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰" class="s-pic-img s-guess-item-img">
+												<img src="../images/0-item_pic.jpg_220x220.jpg" alt="商品名" title="商品名" class="s-pic-img s-guess-item-img">
 											</a>
 										</div>
 										<div class="s-info">
-											<div class="s-title"><a href="#" title="包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰">包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰</a></div>
+											<div class="s-title" style="text-align: center"><a href="#" title="商品名">${cac.product.name }</a></div>
 											<div class="s-price-box">
-												<span class="s-price"><em class="s-price-sign">¥</em><em class="s-value">42.50</em></span>
-												<span class="s-history-price"><em class="s-price-sign">¥</em><em class="s-value">68.00</em></span>
+												<span class="s-price"><em class="s-price-sign">¥</em><em class="s-value">${cac.product.price }</em></span>
+												<span class="s-history-price"><em class="s-price-sign">¥</em><em class="s-value">${cac.product.price+30 }</em></span>
 											</div>
-											<div class="s-extra-box">
-												<span class="s-comment">好评: 98.03%</span>
-												<span class="s-sales">月销: 219</span>
-											</div>
+											
 										</div>
 										<div class="s-tp">
 											<span class="ui-btn-loading-before">找相似</span>
 											<i class="am-icon-shopping-cart"></i>
-											<span class="ui-btn-loading-before buy">加入购物车</span>
-											<p>
-												<a href="javascript:;" class="c-nodo J_delFav_btn">取消收藏</a>
-											</p>
+											<span class="ui-btn-loading-before buy">
+											
+											    <a href="/addCart.action?productId=${cac.product.productId }&userId=${cac.user.userId}" style="color: white;font-size: 12px;">加入购物车</a>
+											
+											</span>
+										
+										</div>
+										<div style="text-align: center">
+											<a href="/deleteCollection.action?productId=${cac.product.productId }&userId=${cac.user.userId}" class="c-nodo J_delFav_btn">取消收藏</a>
 										</div>
 									</div>
-								</div>
-
-								<div class="s-item-wrap">
-									<div class="s-item">
-
-										<div class="s-pic">
-											<a href="#" class="s-pic-link">
-												<img src="${ctx}/images/1-item_pic.jpg_220x220.jpg" alt="s925纯银千纸鹤锁骨链短款简约时尚韩版素银项链小清新秋款女配饰" title="s925纯银千纸鹤锁骨链短款简约时尚韩版素银项链小清新秋款女配饰" class="s-pic-img s-guess-item-img">
-											</a>
-										</div>
-										<div class="s-info">
-											<div class="s-title"><a href="#" title="s925纯银千纸鹤锁骨链短款简约时尚韩版素银项链小清新秋款女配饰">s925纯银千纸鹤锁骨链短款简约时尚韩版素银项链小清新秋款女配饰</a></div>
-											<div class="s-price-box">
-												<span class="s-price"><em class="s-price-sign">¥</em><em class="s-value">49.90</em></span>
-												<span class="s-history-price"><em class="s-price-sign">¥</em><em class="s-value">88.00</em></span>
-											</div>
-											<div class="s-extra-box">
-												<span class="s-comment">好评: 99.74%</span>
-												<span class="s-sales">月销: 69</span>
-											</div>
-										</div>
-										<div class="s-tp">
-											<span class="ui-btn-loading-before">找相似</span>
-											<i class="am-icon-shopping-cart"></i>
-											<span class="ui-btn-loading-before buy">加入购物车</span>
-											<p>
-												<a href="javascript:;" class="c-nodo J_delFav_btn">取消收藏</a>
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="s-item-wrap">
-									<div class="s-item">
-
-										<div class="s-pic">
-											<a href="#" class="s-pic-link">
-												<img src="${ctx}/images/-0-saturn_solar.jpg_220x220.jpg" alt="4折抢购!十二生肖925银女戒指,时尚开口女戒" title="4折抢购!十二生肖925银女戒指,时尚开口女戒" class="s-pic-img s-guess-item-img">
-											<span class="tip-title">已下架</span>
-											</a>
-										</div>
-										<div class="s-info">
-											<div class="s-title"><a href="#" title="4折抢购!十二生肖925银女戒指,时尚开口女戒">4折抢购!十二生肖925银女戒指,时尚开口女戒</a></div>
-											<div class="s-price-box">
-												<span class="s-price"><em class="s-price-sign">¥</em><em class="s-value">378.00</em></span>
-												<span class="s-history-price"><em class="s-price-sign">¥</em><em class="s-value">1888.00</em></span>
-											</div>
-											<div class="s-extra-box">
-												<span class="s-comment">好评: 99.93%</span>
-												<span class="s-sales">月销: 278</span>
-											</div>
-										</div>
-										<div class="s-tp">
-											<span class="ui-btn-loading-before">找相似</span>
-											<i class="am-icon-trash"></i>
-											<span class="ui-btn-loading-before buy">进入店铺</span>
-											<p>
-												<a href="javascript:;" class="c-nodo J_delFav_btn">取消收藏</a>
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="s-item-wrap">
-									<div class="s-item">
-
-										<div class="s-pic">
-											<a href="#" class="s-pic-link">
-												<img src="${ctx}/images/0-item_pic.jpg_220x220.jpg" alt="包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰" title="包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰" class="s-pic-img s-guess-item-img">
-											</a>
-										</div>
-										<div class="s-info">
-											<div class="s-title"><a href="#" title="包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰">包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰</a></div>
-											<div class="s-price-box">
-												<span class="s-price"><em class="s-price-sign">¥</em><em class="s-value">42.50</em></span>
-												<span class="s-history-price"><em class="s-price-sign">¥</em><em class="s-value">68.00</em></span>
-											</div>
-											<div class="s-extra-box">
-												<span class="s-comment">好评: 98.03%</span>
-												<span class="s-sales">月销: 219</span>
-											</div>
-										</div>
-										<div class="s-tp">
-											<span class="ui-btn-loading-before">找相似</span>
-											<i class="am-icon-shopping-cart"></i>
-											<span class="ui-btn-loading-before buy">加入购物车</span>
-											<p>
-												<a href="javascript:;" class="c-nodo J_delFav_btn">取消收藏</a>
-											</p>
-										</div>										
-									</div>
-								</div>
-
-								<div class="s-item-wrap">
-									<div class="s-item">
-
-										<div class="s-pic">
-											<a href="#" class="s-pic-link">
-												<img src="${ctx}/images/1-item_pic.jpg_220x220.jpg" alt="s925纯银千纸鹤锁骨链短款简约时尚韩版素银项链小清新秋款女配饰" title="s925纯银千纸鹤锁骨链短款简约时尚韩版素银项链小清新秋款女配饰" class="s-pic-img s-guess-item-img">
-											</a>
-										</div>
-										<div class="s-info">
-											<div class="s-title"><a href="#" title="s925纯银千纸鹤锁骨链短款简约时尚韩版素银项链小清新秋款女配饰">s925纯银千纸鹤锁骨链短款简约时尚韩版素银项链小清新秋款女配饰</a></div>
-											<div class="s-price-box">
-												<span class="s-price"><em class="s-price-sign">¥</em><em class="s-value">49.90</em></span>
-												<span class="s-history-price"><em class="s-price-sign">¥</em><em class="s-value">88.00</em></span>
-											</div>
-											<div class="s-extra-box">
-												<span class="s-comment">好评: 99.74%</span>
-												<span class="s-sales">月销: 69</span>
-											</div>
-										</div>
-										<div class="s-tp">
-											<span class="ui-btn-loading-before">找相似</span>
-											<i class="am-icon-shopping-cart"></i>
-											<span class="ui-btn-loading-before buy">加入购物车</span>
-											<p>
-												<a href="javascript:;" class="c-nodo J_delFav_btn">取消收藏</a>
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="s-item-wrap">
-									<div class="s-item">
-
-										<div class="s-pic">
-											<a href="#" class="s-pic-link">
-												<img src="${ctx}/images/-0-saturn_solar.jpg_220x220.jpg" alt="4折抢购!十二生肖925银女戒指,时尚开口女戒" title="4折抢购!十二生肖925银女戒指,时尚开口女戒" class="s-pic-img s-guess-item-img">
-											</a>
-										</div>
-										<div class="s-info">
-											<div class="s-title"><a href="#" title="4折抢购!十二生肖925银女戒指,时尚开口女戒">4折抢购!十二生肖925银女戒指,时尚开口女戒</a></div>
-											<div class="s-price-box">
-												<span class="s-price"><em class="s-price-sign">¥</em><em class="s-value">378.00</em></span>
-												<span class="s-history-price"><em class="s-price-sign">¥</em><em class="s-value">1888.00</em></span>
-											</div>
-											<div class="s-extra-box">
-												<span class="s-comment">好评: 99.93%</span>
-												<span class="s-sales">月销: 278</span>
-											</div>
-										</div>
-										<div class="s-tp">
-											<span class="ui-btn-loading-before">找相似</span>
-											<i class="am-icon-shopping-cart"></i>
-											<span class="ui-btn-loading-before buy">加入购物车</span>
-											<p>
-												<a href="javascript:;" class="c-nodo J_delFav_btn">取消收藏</a>
-											</p>
-										</div>
-									</div>
-								</div>
-
+								</div>							
+							</c:forEach>
 							</div>
-
 							<div class="s-more-btn i-load-more-item" data-screen="0"><i class="am-icon-refresh am-icon-fw"></i>更多</div>
 
 						</div>
@@ -297,9 +149,9 @@
 				<div class="footer">
 					<div class="footer-hd">
 						<p>
-							<a href="#">恒望科技</a>
+							<a href="#">乐购我最帅科技</a>
 							<b>|</b>
-							<a href="#">商城首页</a>
+							<a href="/home.action">商城首页</a>
 							<b>|</b>
 							<a href="#">支付宝</a>
 							<b>|</b>
@@ -308,11 +160,11 @@
 					</div>
 					<div class="footer-bd">
 						<p>
-							<a href="#">关于恒望</a>
+							<a href="#">关于乐购</a>
 							<a href="#">合作伙伴</a>
 							<a href="#">联系我们</a>
 							<a href="#">网站地图</a>
-							<em>© 2015-2025 Hengwang.com 版权所有. 更多模板 <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></em>
+							<em>© 2015-2025 lego.com 版权所有. </em>
 						</p>
 					</div>
 				</div>
@@ -326,46 +178,33 @@
 					<li class="person">
 						<p><i class="am-icon-newspaper-o"></i>个人资料</p>
 						<ul>
-							<li> <a href="information.html">个人信息</a></li>
-							<li> <a href="safety.html">安全设置</a></li>
-							<li> <a href="address.html">地址管理</a></li>
-							<li> <a href="cardlist.html">快捷支付</a></li>
+							<li> <a href="/information.action">个人信息</a></li>
+							<li> <a href="/address.action">地址管理</a></li>
 						</ul>
 					</li>
 					<li class="person">
 						<p><i class="am-icon-balance-scale"></i>我的交易</p>
 						<ul>
-							<li><a href="order.html">订单管理</a></li>
-							<li> <a href="change.html">退款售后</a></li>
-							<li> <a href="comment.html">评价商品</a></li>
+							<li><a href="/orderList.action">订单管理</a></li>
+							<li> <a href="/shopcart.action">购物车</a></li>
 						</ul>
 					</li>
-					<li class="person">
-						<p><i class="am-icon-dollar"></i>我的资产</p>
-						<ul>
-							<li> <a href="points.html">我的积分</a></li>
-							<li> <a href="coupon.html">优惠券 </a></li>
-							<li> <a href="bonus.html">红包</a></li>
-							<li> <a href="walletlist.html">账户余额</a></li>
-							<li> <a href="bill.html">账单明细</a></li>
-						</ul>
-					</li>
+				
 
 					<li class="person">
 						<p><i class="am-icon-tags"></i>我的收藏</p>
 						<ul>
-							<li> <a href="collection.html">收藏</a></li>
-							<li> <a href="foot.html">足迹</a></li>
+							<li> <a href="/collection.action">收藏</a></li>
 						</ul>
 					</li>
 
 					<li class="person">
 						<p><i class="am-icon-qq"></i>在线客服</p>
 						<ul>
-							<li> <a href="consultation.html">商品咨询</a></li>
-							<li> <a href="suggest.html">意见反馈</a></li>							
+							<li> <a href="#">商品咨询</a></li>
+							<li> <a href="#">意见反馈</a></li>							
 							
-							<li> <a href="news.html">我的消息</a></li>
+							<li> <a href="#">我的消息</a></li>
 						</ul>
 					</li>
 				</ul>

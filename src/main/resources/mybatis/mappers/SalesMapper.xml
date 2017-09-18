@@ -15,6 +15,9 @@
 	ORDER BY 
 		number desc
 </select>
+
+
+
 <resultMap type="lego.pojo.Sales" id="salesRM">
 	<!-- 完成主表映射 -->
 	<result column="number" property="number"/>

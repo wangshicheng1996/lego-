@@ -12,4 +12,5 @@ public interface SalesService {
 	
 	//查询销售榜单
 	public List<Sales> findAllSales();
+	
 }

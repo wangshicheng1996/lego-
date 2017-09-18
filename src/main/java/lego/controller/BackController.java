@@ -33,6 +33,8 @@ public class BackController {
 	@Autowired
 	SalesService salesService;
 	
+	
+	
 	//后台管理首页
 	@RequestMapping("/back")
 	public String manage(){
@@ -164,6 +166,17 @@ public class BackController {
 		userService.updateUser(userId,"2");
 		
 		return "redirect:/back/permissions";	
+	}
+	
+	
+	//跳转图表
+	@RequestMapping("/SalesPicture")
+	public String SalesPicture(Model model){
+				
+		List<Sales> salesList = salesService.findAllSales();
+		model.addAttribute("salesList", salesList);
+		
+		return "/echarts/柱状图";	
 	}
 
 	

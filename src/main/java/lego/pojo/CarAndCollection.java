@@ -1,17 +1,25 @@
 package lego.pojo;
 
-
 /**
  * 购物车和收藏夹表单
  * @author Administrator
  *
  */
 public class CarAndCollection {
+	private Integer ccId;
 	private User user;//用户对象
 	private Product product;//商品对象
 	
 	private Integer number; //作为购物车表时显示购买数量;而作为收藏夹表时不显示数量
 	private Integer type;   //1:购物车表,2:收藏夹表
+	
+	
+	public Integer getCcId() {
+		return ccId;
+	}
+	public void setCcId(Integer ccId) {
+		this.ccId = ccId;
+	}
 	public User getUser() {
 		return user;
 	}

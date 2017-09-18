@@ -1,13 +1,22 @@
 <%@ page contentType="text/html; charset=utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ include file="../base.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>ECharts</title>
     <!-- 引入 echarts.js -->
-    <script src="echarts.min.js"></script>
+    <script src="${ctx}/echarts.min.js"></script>
+    <script type="text/javascript">
+     var p = ['鼠标','华为荣耀九','32gU盘']
+     var m = [200,156,50]
+    </script>
 </head>
+
 <body>
+
+
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div id="main" style=" margin:100px 400px;width:1000px;height:500px;"></div>
     <script type="text/javascript">
@@ -35,9 +44,9 @@
 		    },
 		    xAxis : [
 		        {            
-			        name : '月份',
+			        name : '商品',
 		            type : 'category',
-		            data : ['一月', '二月', '三月', '四月', '五月', '六月', '七月','八月','九月','十月','十一月','十二月'],
+		            data : p,
 		            axisTick: {
 		                alignWithLabel: true
 		            }
@@ -46,7 +55,7 @@
 		    ],
 		    yAxis : [
 		        {
-			        name : '数量/万件',
+			        name : '销量/件',
 		            type : 'value'
 		            
 		        }
@@ -56,7 +65,7 @@
 		            name:'销售数量',
 		            type:'bar',
 		            barWidth: '50%',
-		            data:[10,20,30,40,50,60,70,80,90,100,110,120]
+		            data:m
 		        }
 		    ]
 		};

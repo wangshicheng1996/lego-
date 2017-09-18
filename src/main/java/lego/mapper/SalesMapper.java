@@ -7,4 +7,5 @@ import lego.pojo.Sales;
 public interface SalesMapper {
 
 	public List<Sales> findAllSales();
+
 }

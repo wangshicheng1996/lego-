@@ -135,7 +135,8 @@
 
               <div class="row">
               		<h1 align="center" >销售榜单</h1>
-					<a href="${ctx}/SalesDownLoad" style="margin-left: 700px">销售榜单下载</a>
+					<a href="${ctx}/SalesDownLoad" style="margin-left: 680px">销售榜单下载</a>&nbsp;|&nbsp;
+					<a href="${ctx}/SalesPicture" target="_blank" >图表展示</a>
 					<hr>
 					<table bordercolor="black" border="1" width="95%" cellspacing="0px" cellpadding="5px">
 						<tr>

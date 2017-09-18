@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lego.mapper.CartMapper">
+
+
+	<select id="findAllCart" resultMap="cartRM" >
+		select p.cc_id,p.user_id,p.product_id,p.number,p.type0,p.name,p.price,p.count,p.cost,p.type1,p.remark,p.image,u.username,u.password,u.remark 
+		from (select c.cc_id,c.user_id,c.product_id,c.number,c.type0,p.name,p.price,p.count,p.cost,p.type1,p.remark,p.image 
+		from car_collection c
+		  left join  product p on c.product_id=p.product_id) p 
+		  left join user_p u on p.user_id=u.user_id 
+		  where p.user_id=#{userId} and type0=1
+	</select>
+	
+	<select id="findAllCollection" resultMap="cartRM">
+		select p.cc_id,p.user_id,p.product_id,p.number,p.type0,p.name,p.price,p.count,p.cost,p.type1,p.remark,p.image,u.username,u.password,u.remark 
+		from (select c.cc_id,c.user_id,c.product_id,c.number,c.type0,p.name,p.price,p.count,p.cost,p.type1,p.remark,p.image 
+		from car_collection c
+		  left join  product p on c.product_id=p.product_id) p 
+		  left join user_p u on p.user_id=u.user_id 
+		  where p.user_id=#{userId} and type0=2
+	</select>
+	
+
+	<resultMap type="lego.pojo.CarAndCollection" id="cartRM" autoMapping="true">
+	     <id column="cc_id" property="ccId"/>
+	     <result column="number" property="number"/>
+	     <result column="type0" property="type"/>
+	     <association property="user" javaType="lego.pojo.User" resultMap="userRM"/>
+
+	     <association property="product" javaType="lego.pojo.Product" resultMap="productRM"/>
+
+	</resultMap>
+	<resultMap type="lego.pojo.User" id="userRM" autoMapping="true">
+		<id column="user_id" property="userId"/>
+	</resultMap>
+	<resultMap type="lego.pojo.Product" id="productRM" autoMapping="true">
+		<id column="product_id" property="productId"/>
+		<result column="type1" property="type"/>	
+	</resultMap>
+	<delete id="deleteCollection">
+		delete from car_collection where user_id=#{userId} and product_id=#{productId} and type0=2
+	</delete>
+	<insert id="addCart">
+		insert into car_collection(user_id,product_id,number,type0) values(#{userId},#{productId},1,1)
+	</insert>
+	<delete id="deleteShop">
+		delete from car_collection where user_id=#{userId} and product_id=#{productId} and type0=1
+	</delete>
+	<insert id="addCollection">
+		insert into car_collection(user_id,product_id,number,type0) values(#{userId},#{productId},1,2)
+	</insert>
+	<update id="updateNum">
+		update car_collection set number=#{pnum} 
+		where user_id=#{userId} and product_id=#{productId} and type0=1
+	</update>
+</mapper>
