@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lego.mapper.OrderItemsMapper">
+
+	<!-- 查询详情列表 -->
+	<select id="findAll" resultMap="itemsRM">
+		SELECT o.*,p.price price,p.name name,p.count count,p.state state,p.image image FROM order_p o
+			LEFT JOIN
+		(SELECT p.price price,p.name name,p.image image,o.count count,o.state state,o.order_id order_id FROM orderitems o
+			LEFT JOIN
+		product p
+			ON p.product_id=o.product_id) p
+			ON o.order_id=p.order_id
+			where user_id = #{userId}
+	</select>
+	
+	<!-- 封装order对象 -->
+	<resultMap type="lego.pojo.OrderItems" id="itemsRM" autoMapping="true">
+		<association property="product" javaType="lego.pojo.Product" resultMap="productRM"/>
+		<association property="order" javaType="lego.pojo.Order" resultMap="orderRM"/>
+	</resultMap>
+	
+	<resultMap type="lego.pojo.Product" id="productRM" autoMapping="true">
+		<id column="product_id" property="productId"></id>
+	</resultMap>
+	
+	<resultMap type="lego.pojo.Order" id="orderRM" autoMapping="true">
+		<id column="order_id" property="orderId"></id>
+	</resultMap>
+
+
+
+	<delete id="deleteorderItems">
+		delete from orderitems where order_id in (
+		<foreach  collection="array" item="id" separator=",">
+			#{id}
+		</foreach>
+		)
+	</delete>
+	<!-- 新增订单信息 -->
+	<insert id="saveOrderItems">
+	insert into orderitems(product_id,order_id,count,state,express,express_id)
+	values(
+	#{orderId},
+	#{product.productId},
+	#{count},
+	#{state},
+	#{express},
+	#{expressId}
+	)
+	</insert>
+</mapper>

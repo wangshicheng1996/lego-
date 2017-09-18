@@ -5,22 +5,10 @@
 <mapper namespace="lego.mapper.OrderMapper">
 	
 	
-	<!--由于开启了别名包,所以在映射时会自动的拼接包路径  -->
-	<select id="findAll" resultMap="orderRM">
-		select * from order_p where user_id=#{userId}
-		      
-		
-		
-	</select>
 	
-	<resultMap type="lego.pojo.Order" id="orderRM" autoMapping="true">
-		<id column="order_id" property="orderId"/>
-		
-		<association property="user" javaType="lego.pojo.User">
-			<id column="user_id" property="user"/>
-		</association>
-	</resultMap>
 	
+	
+	<!-- 删除订单 -->
 	<delete id="deletOrder">
 		delete from order_p where order_id in (
 		<foreach  collection="array" item="id" separator=",">
@@ -29,7 +17,7 @@
 		)
 	</delete>
 	
-	
+	<!-- 修改支付状态 -->
 	<!--批量的数据修改 只修改单个数据  -->
 	<update id="updateState">
 		update order_p set paystate = #{paystate} where order_id in(
@@ -39,6 +27,19 @@
 			</foreach>
 		)
 	</update>
-	
+	<!-- 新增订单 -->
+	<!-- <insert id="saveOrder">
+	insert into order_p(order_id,user_id,money,paystate,address,
+	order_time,remark)
+	values(
+	#{orderId},
+	#{user.userId},
+	#{money},
+	#{paystate},
+	#{address.address},
+	#{orderTime},
+	#{remark}
+	)
+	</insert> -->
 	
 </mapper>

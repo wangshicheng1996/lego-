@@ -7,25 +7,39 @@ package lego.pojo;
  *
  */
 public class OrderItems {
-	private String orderId;//订单id
-	private String productId;//商品id
+	
+	private Order order;
+	private Product product;//封装商品对象
 	
 	private Integer count; //购买数量
 	private Integer state; //0:未下单1:未发货 2:已发货,配送中 3:已签收
-	private String express;
-	private String expressId;
+	private String num;//快递公司编号
+	private String nu;//快递单号
 	
-	public String getOrderId() {
-		return orderId;
+	public Order getOrder() {
+		return order;
 	}
-	public void setOrderId(String orderId) {
-		this.orderId = orderId;
+	public void setOrder(Order order) {
+		this.order = order;
 	}
-	public String getProductId() {
-		return productId;
+	public String getNum() {
+		return num;
 	}
-	public void setProductId(String productId) {
-		this.productId = productId;
+	public void setNum(String num) {
+		this.num = num;
+	}
+	public String getNu() {
+		return nu;
+	}
+	public void setNu(String nu) {
+		this.nu = nu;
+	}
+	
+	public Product getProduct() {
+		return product;
+	}
+	public void setProduct(Product product) {
+		this.product = product;
 	}
 	public Integer getCount() {
 		return count;
@@ -39,17 +53,4 @@ public class OrderItems {
 	public void setState(Integer state) {
 		this.state = state;
 	}
-	public String getExpress() {
-		return express;
-	}
-	public void setExpress(String express) {
-		this.express = express;
-	}
-	public String getExpressId() {
-		return expressId;
-	}
-	public void setExpressId(String expressId) {
-		this.expressId = expressId;
-	}
-	
 }

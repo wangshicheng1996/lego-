@@ -7,9 +7,9 @@ pageEncoding="utf-8"%>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script>
 function j() {
-	var num = '<%=request.getAttribute("num")%>';
-	var nu = "<%=request.getAttribute("nu")%>";
-window.open= 
+	var num = '<%=session.getAttribute("num")%>';
+	var nu = "<%=session.getAttribute("nu")%>";
+window.location.href= 
 	//"http://www.baidu.com/";
 	"https://www.kuaidi100.com/chaxun?com="+num+"&nu="+nu;
 }

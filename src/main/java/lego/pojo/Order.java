@@ -11,13 +11,11 @@ import java.util.Date;
 public class Order {
 	private Address address;//收货地址
 	private User user;//用户
-	
 	private String orderId;//订单id
 	private Double money;//总价
 	private Integer paystate; //支付状态：0:未支付1:已支付
 	private Date orderTime;//下单时间
 	private String remark;//订单描述
-	
 	public Address getAddress() {
 		return address;
 	}
