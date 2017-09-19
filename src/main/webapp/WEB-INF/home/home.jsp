@@ -2558,7 +2558,7 @@
 							<div class="avatar_box " style="height:100px;">
 								<iframe id="fancybox-frame" name="fancybox-frame1505560652741" frameborder="0" scrolling="no" hspace="0"  src="http://i.tianqi.com/index.php?c=code&a=getcode&id=35&h=55&w=200"></iframe>							</div>
 							<div class="login_btnbox ">
-								<a href="# " class="login_order ">我的订单</a>
+								<a href="/orderList " class="login_order ">我的订单</a>
 								<a href="# " class="login_favorite ">我的收藏</a>
 							</div>
 							<i class="icon_arrow_white "></i>
@@ -2595,8 +2595,7 @@
 						</li>
 						<!--二维码 -->
 						<li class="qtitem ">
-							<a href="#none "><span class="mpbtn_qrcode "></span></a>
-							<div class="mp_qrcode " style="display:none; "><img src="${ctx}/images/weixin_code_145.png " /><i class="icon_arrow_white "></i></div>
+							<a href="/back " title="后台管理"><span class="mpbtn_qrcode "></span></a>
 						</li>
 						<li class="qtitem ">
 							<a href="#top " class="return_top "><span class="top "></span></a>

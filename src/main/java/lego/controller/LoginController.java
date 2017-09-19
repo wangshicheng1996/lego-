@@ -93,7 +93,7 @@ public class LoginController {
 		//邮箱验证
 		MailUtil.send_mail(semail, user.getUserId(), h);
 		// 提示用户, 3秒之后跳转到首页
-		response.getWriter().write("<h1 style='color:red;text-align:center;'>请到邮箱进行激活操作, 激活之后注册成功...</h1>");
+		response.getWriter().write("<h1 style='color:red;text-align:center;'>Registration, please activate...</h1>");
 		response.setHeader("refresh", "3;url="
 				+ "/index.jsp");
 		

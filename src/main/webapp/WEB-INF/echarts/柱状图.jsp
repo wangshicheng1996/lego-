@@ -15,7 +15,7 @@
 </head>
 
 <body>
-
+<h1 ></h1>
 
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div id="main" style=" margin:100px 400px;width:1000px;height:500px;"></div>

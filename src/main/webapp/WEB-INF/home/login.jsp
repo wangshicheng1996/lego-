@@ -56,7 +56,7 @@
 				</c:if>
 			</div>
 								<div class="am-cf">
-									<input type="submit" name="" value="登 录" class="am-btn am-btn-primary am-btn-sm">
+									<a href="/index.jsp"><input type="submit" name="" value="登 录" class="am-btn am-btn-primary am-btn-sm"></a>
 								</div>
 						<div class="partner">		
 								<h3>合作账号</h3>
