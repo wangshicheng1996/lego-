@@ -1,19 +1,20 @@
 package lego.controller;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-import java.util.UUID;
 
-import javax.servlet.http.HttpServletRequest;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.multipart.MultipartFile;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lego.pojo.Product;
 import lego.pojo.Sales;
@@ -21,6 +22,7 @@ import lego.pojo.User;
 import lego.service.ProductService;
 import lego.service.SalesService;
 import lego.service.UserService;
+import net.sf.json.JSONArray;
 
 //后台管理
 @Controller
@@ -171,10 +173,25 @@ public class BackController {
 	
 	//跳转图表
 	@RequestMapping("/SalesPicture")
-	public String SalesPicture(Model model){
+	public String SalesPicture(Model model) throws JsonProcessingException{
 				
 		List<Sales> salesList = salesService.findAllSales();
 		model.addAttribute("salesList", salesList);
+		
+		//查询结果放在list中---商品名
+		List<String> nameList = salesService.findAllSalesName();
+		
+		//查询结果放在list中---商品销售量
+		List<Integer> countList = salesService.findAllSalesCount();
+	    
+	    
+		//将数据转化为JSON串
+		
+		JSONArray nameArray = JSONArray.fromObject(nameList);
+		JSONArray countArray = JSONArray.fromObject(countList);
+		
+		model.addAttribute("nameArray", nameArray);
+		model.addAttribute("countArray", countArray);
 		
 		return "/echarts/柱状图";	
 	}

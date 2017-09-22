@@ -63,6 +63,18 @@ public class SalesServiceImpl implements SalesService{
 		return str;
 	}
 
+	//查询商品所有名字
+	@Override
+	public List<String> findAllSalesName() {
+		return salesMapper.findAllSalesName();
+	}
+
+	//查询所有商品销量
+	@Override
+	public List<Integer> findAllSalesCount() {
+		return salesMapper.findAllSalesCount();
+	}
+
 
 
 }

@@ -16,6 +16,27 @@
 		number desc
 </select>
 
+<!-- 查询全部商品名称 -->
+<select id="findAllSalesName" resultType="string">
+	SELECT product.name
+		FROM sales,product   
+	WHERE   
+	product.product_id = sales.product_id  
+	GROUP BY 
+		sales.product_id  
+
+</select>
+
+<!-- 查询全部商品销量 -->
+<select id="findAllSalesCount" resultType="java.lang.Integer">
+	SELECT SUM(sales.sale_count) number 
+		FROM sales,product   
+	WHERE   
+	product.product_id = sales.product_id  
+	GROUP BY 
+		sales.product_id  
+
+</select>
 
 
 <resultMap type="lego.pojo.Sales" id="salesRM">

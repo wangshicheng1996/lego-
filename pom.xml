@@ -23,6 +23,33 @@
 	</properties>
 
 	<dependencies>
+	
+	<!-- Jackson Json处理工具包 -->
+	<dependency>
+	    <groupId>com.fasterxml.jackson.core</groupId>
+	    <artifactId>jackson-databind</artifactId>
+	    <version>2.8.9</version>
+	</dependency>
+	<!-- list与jsonArray相互转换 -->
+	<!-- https://mvnrepository.com/artifact/net.sf.json-lib/json-lib -->
+	<dependency>
+    <groupId>net.sf.json-lib</groupId>
+   	 	<artifactId>json-lib</artifactId>
+    	<version>2.4</version>
+    	<classifier>jdk15</classifier>
+	</dependency>
+	
+	<dependency>
+	    <groupId>net.sf.ezmorph</groupId>
+	    <artifactId>ezmorph</artifactId>
+	    <version>1.0.6</version>
+	</dependency>
+	
+	
+
+	
+
+	
 	<!-- 邮件发送 -->
 	<dependency >  
             <groupId >com.sun.mail </groupId >  
